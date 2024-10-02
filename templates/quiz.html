@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css"> <!-- External CSS for sidebar and other styles -->
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <span class="heading">
+            <img src="pictures/logo.png" alt="Logo"> kxetra
+        </span>
+        <span class="heading2">upsc</span>
+        <div class="nav-buttons">
+            <button onclick="window.location.href='/home'">
+                <img src="pictures/home-icon.png" alt="Home Icon"> Home
+            </button>
+            <button onclick="window.location.href='/newsfeed'">
+                <img src="pictures/news-icon.png" alt="News Icon"> Newsfeed
+            </button>
+            <button onclick="window.location.href='/videofeed'">
+                <img src="pictures/video-icon.png" alt="Video Icon"> Videofeed
+            </button>
+            <button onclick="window.location.href='/library'">
+                <img src="pictures/library-icon.png" alt="Library Icon"> Library
+            </button>
+            <button class="selected" onclick="window.location.href='/tests'">
+                <img src="pictures/tests-icon.png" alt="Tests Icon"> Tests
+            </button>
+        </div>
+        <button id="create-notes-btn">Create Notes</button>
+    </div>
+   <div class="maincontent1">
+    <div class="profile">
+        <h3><img src="pictures/Profile Picture.png" alt="Profile Picture">Maietry Prajapati</h3>
+        <a href="/logout">Logout</a>
+    </div>
+   </div>
+    <!-- Main Content Area -->
+    <div class="container main-content">
+
+        <!-- Status Bar -->
+
+
+        <div class="question-container">
+            <h4 id="question-title">Question 1</h4>
+            <p id="question-text"></p>
+            <div id="options-container"></div>
+
+            <!-- Buttons: Check Answer and Next -->
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-secondary" id="prev-button" onclick="prevQuestion()">Previous</button>
+                <button class="btn btn-info" id="check-answer-button" onclick="checkAnswer()">Submit</button>
+                <button class="btn btn-primary" id="next-button" onclick="nextQuestion()" disabled>Next</button>
+            </div>
+            <div id="answer-display" class="answer-display"></div>
+
+            <!-- Progress Bar -->
+            <br><br>
+            <div class="progress">
+                <div class="progress-bar bg-info" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- Progress Text -->
+        <div class="question-progress text-center">
+            <span id="progress-text">Question 1 of {{ total_questions }}</span>
+        </div>
+    </div>
+
+
+<script>
+let currentQuestion = 0;
+let totalQuestions = parseInt(document.getElementById('progress-text').textContent.split(' ')[3]); // Get the total questions count from progress text
+let score = 0;
+let selectedAnswers = []; // Array to store selected answers
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadQuestion(currentQuestion);
+    document.getElementById("prev-button").disabled = true; // Disable Previous button initially
+});
+
+function loadQuestion(questionId) {
+    fetch(`/get_question/${questionId}`)
+        .then(response => response.json())
+        .then(data => {
+            if (!data.error) {
+                document.getElementById("question-title").textContent = `Question ${questionId + 1}`;  // Update the question number in the title
+                document.getElementById("question-text").textContent = data.question;
+
+                let options = data.options.map((option, index) => `
+                    <div class="form-check option">
+                        <input class="form-check-input" type="radio" name="option" id="option${index}" value="${option}"
+                        ${selectedAnswers[questionId] === option ? 'checked' : ''}>
+                        <label class="form-check-label" for="option${index}">
+                            ${option}
+                        </label>
+                    </div>
+                `).join("");
+
+                document.getElementById("options-container").innerHTML = options;
+                document.getElementById('answer-display').textContent = ''; // Clear any previous answer display
+                updateButtonsState();
+            }
+        });
+
+    // Disable the Next button until Check Answer is clicked
+    document.getElementById('next-button').disabled = true;
+    enableOptions(); // Enable options when a new question is loaded
+}
+
+function nextQuestion() {
+    currentQuestion++;
+    if (currentQuestion < totalQuestions) {
+        loadQuestion(currentQuestion);
+    } else {
+        showScore(); // Show score when last question is reached
+    }
+    updateProgressBar();
+}
+
+function checkAnswer() {
+    let selectedOption = document.querySelector('input[name="option"]:checked');
+    if (selectedOption) {
+        let selectedAnswer = selectedOption.value;
+
+        fetch('/check_answer', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ question_id: currentQuestion, selected_answer: selectedAnswer })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.is_correct) {
+                score++;
+                document.getElementById('answer-display').innerHTML = `<span class="correct">Correct! Well done!</span>`;
+            } else {
+                fetch(`/get_question/${currentQuestion}`)
+                    .then(response => response.json())
+                    .then(questionData => {
+                        document.getElementById('answer-display').innerHTML = `<span class="incorrect">Incorrect! The correct answer is: <strong>${questionData.answer}</strong></span>`;
+                    });
+            }
+
+            // Enable the Next button after checking the answer
+            document.getElementById('next-button').disabled = false;
+
+            // Disable the options after checking the answer
+            disableOptions();
+        });
+    } else {
+        alert("Please select an option.");
+    }
+}
+
+function prevQuestion() {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        loadQuestion(currentQuestion);
+        updateProgressBar();
+    }
+}
+
+function updateProgressBar() {
+    let progress = ((currentQuestion + 1) / totalQuestions) * 100;
+    document.getElementById("progress-bar").style.width = `${progress}%`;
+    document.getElementById("progress-text").textContent = `Question ${currentQuestion + 1} of ${totalQuestions}`;
+}
+
+function updateButtonsState() {
+    document.getElementById("prev-button").disabled = currentQuestion === 0;
+    document.getElementById("check-answer-button").disabled = false; // Ensure the Check Answer button is always enabled
+}
+
+function showScore() {
+    document.querySelector('.question-container').innerHTML = `
+        <h2>Your Score: ${score} / ${totalQuestions}</h2>
+    `;
+}
+
+function disableOptions() {
+    let options = document.querySelectorAll('input[name="option"]');
+    options.forEach(option => {
+        option.disabled = true;
+    });
+}
+
+function enableOptions() {
+    let options = document.querySelectorAll('input[name="option"]');
+    options.forEach(option => {
+        option.disabled = false;
+    });
+}
+
+</script>
+
+</body>
+</html>

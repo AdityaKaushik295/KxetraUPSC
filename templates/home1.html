@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kxetra UPSC</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 240px;
+            background-color: #ffffff;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background-color: #e0e0e0;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .sidebar .create-notes-btn {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .sidebar .create-notes-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 260px; /* Leaves space for the sidebar */
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .header .user-info {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header .user-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .header .user-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Library and News Section */
+        .library-updates {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .library-updates h2 {
+            width: 100%;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .main-content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Kxetra UPSC</h2>
+        <a href="#" class="active">Home</a>
+        <a href="#">Newsfeed</a>
+        <a href="#">Videofeed</a>
+        <a href="#">Library</a>
+        <a href="#">Tests</a>
+        <a href="#" class="create-notes-btn">Create Notes</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1>Library & News Updates</h1>
+            <div class="user-info">
+                Maietry Prajapati | <a href="#">Logout</a>
+            </div>
+        </div>
+
+        <!-- Your Carousel or Content Goes Here -->
+        <div class="library-updates">
+            <!-- The carousel and content that you do not want touched should go here -->
+            <div class="carousel-item">
+                <img src="path-to-book-image.jpg" alt="Book Image" style="width: 100px; height: 150px;">
+                <h3>The Indian Economy by Sanjiv Verma</h3>
+                <button>Open Book</button>
+            </div>
+            <!-- Add other carousel items or other content here -->
+        </div>
+    </div>
+
+</body>
+</html>

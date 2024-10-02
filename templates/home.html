@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aspire - UPSC Study Platform</title>
+    <script src="https://unpkg.com/htmx.org@1.6.1/dist/htmx.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        .header {
+            padding: 10px;
+            margin: 10px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .main-content {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .carousel-container, .carousel-containerv, .carousel-container-books {
+            width: 87%;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel, .carouselv, .carousel-books {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            padding-left: 50px;
+        }
+        .carousel-nav, .carousel-navv, .carousel-nav-books {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            background-color: #333;
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            z-index: 2;
+        }
+        .left-nav, .left-navv, .left-nav-books {
+            left: 10px;
+        }
+        .right-nav, .right-navv, .right-nav-books {
+            right: 10px;
+        }
+        .card, .cardv, .card-books {
+            flex: 0 0 250px;
+            margin-right: 10px;
+            padding: 1rem;
+            background-color: #fcfafa;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .card-content {
+            padding-top: 10px;
+        }
+        h2 {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- News Section -->
+    <div class="main-content">
+        <div class="header">News Updates</div>
+        <div class="carousel-container">
+            <div class="carousel-nav left-nav">&lt;</div>
+            <div class="carousel">
+                <!-- News Cards -->
+                {% for i, news in enumerate(articles) %}
+                <div class="card" style="background-color: #fffafe; border: 0.1px solid #d6d4d6; padding: 1rem; border-radius: 10px; box-shadow: 2px 2px 3px rgba(0,0,0,0.1); text-align: center; width: 250px;">
+                    <div class="card-image">
+                        <img src="{{ news.image }}" alt="Image" style="width: 100%; height: auto; border-radius: 10px;">
+                    </div>
+                    <div class="card-content">
+                        <h3 style="color: #333; font-weight: bold;">{{ news.title }}</h3>
+                        <p>{{ news.pubDate }}</p>
+                        <p hidden>{{ news.summary }}</p>
+                        <a href="{{ news.link }}" target="_blank" style="display: inline-block; padding: 0.5rem 1rem; background-color: #b3b3b3; color: white; text-decoration: none; border-radius: 4px;">Open</a>
+                        <button onclick="saveToNotes({{ i }})" style="display: inline-block; padding: 0.5rem 1rem; background-color: #4287f5; color: white; text-decoration: none; border-radius: 4px;">Save to Notes</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="carousel-nav right-nav">&gt;</div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="main-content">
+        <div class="header">Video Feed</div>
+        <div class="carousel-containerv">
+            <div class="carousel-navv left-navv">&lt;</div>
+            <div class="carouselv">
+                <!-- Video Cards -->
+                {% for i, videoitem in enumerate(videos) %}
+                <div class="cardv" style="background-color: #fffafe; border: 0.1px solid #d6d4d6; padding: 1rem; border-radius: 10px; box-shadow: 2px 2px 3px rgba(0,0,0,0.1); text-align: center; width: 250px;">
+                    <div class="card-image">
+                        <img src="{{ videoitem.image }}" alt="Image" style="width: 100%; height: auto; border-radius: 10px;">
+                    </div>
+                    <div class="card-content">
+                        <h3 style="color: #333; font-weight: bold;">{{ videoitem.title }}</h3>
+                        <p>{{ videoitem.channel }}</p>
+                        <a href="{{ videoitem.video_link }}" target="_blank" style="display: inline-block; padding: 0.5rem 1rem; background-color: #b3b3b3; color: white; text-decoration: none; border-radius: 4px;">Open</a>
+                        <button onclick="saveToNotesv({{ i }})" style="display: inline-block; padding: 0.5rem 1rem; background-color: #4287f5; color: white; text-decoration: none; border-radius: 4px;">Save to Notes</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="carousel-navv right-navv">&gt;</div>
+        </div>
+    </div>
+
+    <!-- Book Section (New Carousel) -->
+    <div class="main-content">
+        <div class="header">Library</div>
+        <div class="carousel-container-books">
+            <div class="carousel-nav-books left-nav-books">&lt;</div>
+            <div class="carousel-books">
+                <!-- Book Cards -->
+                {% for i, book in enumerate(books) %}
+                <div class="card-books" style="background-color: #fffafe; border: 0.1px solid #d6d4d6; padding: 1rem; border-radius: 10px; box-shadow: 2px 2px 3px rgba(0,0,0,0.1); text-align: center; width: 250px;">
+                    <div class="card-image">
+                        <img src="{{ book.book_image }}" alt="Book Image" style="width: 100%; height: auto; border-radius: 10px;">
+                    </div>
+                    <div class="card-content">
+                        <h3 style="color: #333; font-weight: bold;">{{ book.book_name }}</h3>
+                        <button onclick="openBook('{{ book.book_name }}')" style="display: inline-block; padding: 0.5rem 1rem; background-color: #4287f5; color: white; text-decoration: none; border-radius: 4px;">Open Book</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="carousel-nav-books right-nav-books">&gt;</div>
+        </div>
+    </div>
+
+    <!-- Logout and Create Notes -->
+    <p><a href="/logout" style="display: inline-block; padding: 0.5rem 1rem; background-color: #4287f5; color: white; text-decoration: none; border-radius: 4px;">Logout</a></p>
+    <p><button id="create-notes-btn" style="display: inline-block; padding: 0.5rem 1rem; background-color: #4287f5; color: white; text-decoration: none; border-radius: 4px;">Create Notes</button></p>
+
+    <!-- Status Bar -->
+    <div id="status-bar" style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); background-color: #4caf50; color: white; padding: 10px; border-radius: 5px; display: none; z-index: 100;">
+        Notes successfully created!
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentPosition = 0;
+            const carousel = document.querySelector('.carousel');
+            const cards = document.querySelectorAll('.card');
+            const cardWidth = cards[0].offsetWidth + 10;
+            const visibleCards = 3;
+            const maxScroll = cardWidth * (cards.length - visibleCards);
+
+            function updateCarousel() {
+                carousel.style.transform = `translateX(${-currentPosition}px)`;
+            }
+
+            document.querySelector('.left-nav').addEventListener('click', function() {
+                if (currentPosition > 0) {
+                    currentPosition -= cardWidth;
+                    updateCarousel();
+                }
+            });
+
+            document.querySelector('.right-nav').addEventListener('click', function() {
+                if (currentPosition < maxScroll) {
+                    currentPosition += cardWidth;
+                    updateCarousel();
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentPositionv = 0;
+            const carouselv = document.querySelector('.carouselv');
+            const cardsv = document.querySelectorAll('.cardv');
+            const cardWidthv = cardsv[0].offsetWidth + 10;
+            const visibleCardsv = 3;
+            const maxScrollv = cardWidthv * (cardsv.length - visibleCardsv);
+
+            function updateCarouselv() {
+                carouselv.style.transform = `translateX(${-currentPositionv}px)`;
+            }
+
+            document.querySelector('.left-navv').addEventListener('click', function() {
+                if (currentPositionv > 0) {
+                    currentPositionv -= cardWidthv;
+                    updateCarouselv();
+                }
+            });
+
+            document.querySelector('.right-navv').addEventListener('click', function() {
+                if (currentPositionv < maxScrollv) {
+                    currentPositionv += cardWidthv;
+                    updateCarouselv();
+                }
+            });
+
+            let currentPositionBooks = 0;
+            const carouselBooks = document.querySelector('.carousel-books');
+            const cardsBooks = document.querySelectorAll('.card-books');
+            const cardWidthBooks = cardsBooks[0].offsetWidth + 10;
+            const visibleCardsBooks = 3;
+            const maxScrollBooks = cardWidthBooks * (cardsBooks.length - visibleCardsBooks);
+
+            function updateCarouselBooks() {
+                carouselBooks.style.transform = `translateX(${-currentPositionBooks}px)`;
+            }
+
+            document.querySelector('.left-nav-books').addEventListener('click', function() {
+                if (currentPositionBooks > 0) {
+                    currentPositionBooks -= cardWidthBooks;
+                    updateCarouselBooks();
+                }
+            });
+
+            document.querySelector('.right-nav-books').addEventListener('click', function() {
+                if (currentPositionBooks < maxScrollBooks) {
+                    currentPositionBooks += cardWidthBooks;
+                    updateCarouselBooks();
+                }
+            });
+
+            // Save news article to notes
+            window.saveToNotes = function(index) {
+                fetch(`/updatenotes?index=${index}`, {
+                    method: 'POST'
+                }).then(response => response.json())
+                  .then(data => {
+                      alert(`Article saved! Total notes: ${data.notes_count}`);
+                  });
+            };
+
+            // Save video to notes
+            window.saveToNotesv = function(index) {
+                fetch(`/updatenotesv?index=${index}`, {
+                    method: 'POST'
+                }).then(response => response.json())
+                  .then(data => {
+                      alert(`Video saved! Total notes: ${data.notes_count}`);
+                  });
+            };
+
+            // Open book and display chapters
+
+
+            // Create notes via AJAX
+            document.getElementById('create-notes-btn').addEventListener('click', function() {
+                fetch('/create_pages', {
+                    method: 'POST'
+                }).then(response => {
+                    if (response.ok) {
+                        const statusBar = document.getElementById('status-bar');
+                        statusBar.style.display = 'block';
+                        statusBar.innerText = 'Notes successfully created!';
+                        setTimeout(() => {
+                            statusBar.style.display = 'none';
+                        }, 3000);
+                    } else {
+                        alert('Error creating notes.');
+                    }
+                });
+            });
+        });
+
+        window.openBook = function(bookName) {
+    window.location.href = `/books/${bookName}`;
+};
+    </script>
+</body>
+</html>

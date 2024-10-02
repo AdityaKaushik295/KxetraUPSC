@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aspire - UPSC Study Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/htmx.org@1.6.1/dist/htmx.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+            overflow-y: auto; /* Allows vertical scrolling */
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 300px;
+            background-color: #f0f0f0; /* Light grey background */
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .heading {
+            font-family: 'ABeeZee', sans-serif;
+            display: flex;
+            align-items: center;
+            font-size: 46px;
+            margin-bottom: 20px;
+            color: #C72A0B;
+            transform: translate(-5%,20%);
+        }
+
+        .heading2 {
+            font-family: 'ABeeZee', sans-serif;
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #333;
+            transform: translate(75%,-70%);
+        }
+
+        .sidebar img {
+            margin-right: 10px; /* Move the logo to the left of the text */
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .sidebar button {
+            width: 120%;
+            padding: 10px;
+            margin: 15px;
+            font-size: 20px;
+            background-color: transparent; /* Transparent background */
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            transition: background-color 0.3s ease;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            transform: translate(-15%,20%);
+        }
+
+        .sidebar button img {
+            width: 20px; /* Adjust icon size */
+            height: 20px;
+            object-fit: cover; /* Make sure the icons fit well */
+            margin-right: 10px; /* Add space between image and text */
+        }
+
+        .sidebar button:hover {
+            background-color: rgb(168, 168, 168); /* Grey background on hover */
+        }
+
+        .sidebar button.selected {
+            background-color: black; /* Black background when selected */
+            color: white;
+        }
+
+        /* Positioning of buttons */
+        .sidebar .nav-buttons {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .sidebar #create-notes-btn {
+            width: 80%;
+            margin-top: auto;
+            margin-bottom: 40px; /* Place at the bottom */
+            margin-left: 5px;
+            text-align: left;
+            background-color: darkgrey;
+            transform: translate(0%,-50%);
+            justify-content: center;
+        }
+
+        .sidebar #create-notes-btn:hover{
+            background-color: grey;
+        }
+
+        /* Profile and Logout */
+        .profile {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            transform: translate(310%,0%);
+            flex-direction: column;
+        }
+
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px; /* Placeholder image to the left of profile name */
+        }
+
+        .profile h3 {
+            margin-right: 20px;
+            color: #333;
+            align-items: center;
+            display: flex;
+        }
+
+        .profile a {
+            padding: 10px;
+            background-color: transparent; /* Transparent background */
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            transform: translate(70%,-70%);
+        }
+
+        .profile a:hover {
+            background-color: rgb(211, 211, 211); /* Grey background on hover */
+        }
+
+        /* Main Content */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            margin-left: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box; /* Include padding and margins in width calculation */
+            overflow-x: hidden; /* Ensure no horizontal scrolling */
+        }
+
+        .header {
+            padding: 10px;
+            margin: 10px;
+            font-size: 36px;
+            width: 100%;
+            text-align: left; /* Left-align headers */
+            margin-left: 90px;
+        }
+
+        .carousel-container, .carousel-containerv, .carousel-container-books {
+            width: 87%;
+            overflow: hidden;
+            position: relative;
+            margin-top: 50px; /* Adjust margin to move carousel down */
+        }
+
+        .carousel, .carouselv, .carousel-books {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            padding-left: 50px;
+            margin-bottom: 60px;
+        }
+
+        /* Cards */
+        .card, .cardv, .card-books {
+            flex: 0 0 250px;
+            margin-right: 10px;
+            padding: 1rem;
+            background-color: #fcfafa;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .card-content {
+            padding-top: 10px;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* Navigation */
+        .carousel-nav, .carousel-navv, .carousel-nav-books {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            background-color: #333;
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            z-index: 2;
+        }
+
+        .left-nav, .left-navv, .left-nav-books {
+            left: 10px;
+        }
+
+        .right-nav, .right-navv, .right-nav-books {
+            right: 10px;
+        }
+
+        /* Status Bar */
+        #status-bar {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <span class="heading"><img src="pictures/logo.png" alt="Logo"> kxetra</span>
+        <span class="heading2">upsc</span>
+
+        <div class="nav-buttons">
+            <button class="selected" onclick="window.location.href='/home'">
+                <img src="pictures/home-icon.png" alt="Home Icon"> Home
+            </button>
+            <button onclick="window.location.href='/newsfeed'">
+                <img src="pictures/news-icon.png" alt="News Icon"> Newsfeed
+            </button>
+            <button onclick="window.location.href='/videofeed'">
+                <img src="pictures/video-icon.png" alt="Video Icon"> Videofeed
+            </button>
+            <button onclick="window.location.href='/library'">
+                <img src="pictures/library-icon.png" alt="Library Icon"> Library
+            </button>
+            <button onclick="window.location.href='/tests'">
+                <img src="pictures/tests-icon.png" alt="Tests Icon"> Tests
+            </button>
+        </div>
+
+        <button id="create-notes-btn">Create Notes</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Profile and Logout -->
+        <div class="profile">
+            <!--<img src="profile-placeholder.png" alt="Profile Picture">--> <!-- Placeholder for profile picture -->
+            <h3> <img src=" {{profilepic}} " alt="Profile Picture">{{username}}</h3>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <!-- Library Section -->
+        <div class="header">Library</div>
+        <div class="carousel-container-books">
+            <div class="carousel-nav-books left-nav-books">&lt;</div>
+            <div class="carousel-books">
+                <!-- Book Cards -->
+                {% for i, book in enumerate(books) %}
+                <div class="card-books" style="background-color: #fffafe; border: 0.1px solid #d6d4d6; padding: 1rem; border-radius: 10px; box-shadow: 2px 2px 3px rgba(0,0,0,0.1); text-align: center; width: 250px;">
+                    <div class="card-image">
+                        <img src="{{ book.book_image }}" alt="Book Image" style="width: 100%; height: auto; border-radius: 10px;">
+                    </div>
+                    <div class="card-content">
+                        <h3 style="color: #333; font-weight: bold;">{{ book.book_name }}</h3>
+                        <button onclick="openBook('{{ book.book_name }}')" style="display: inline-block; padding: 0.5rem 1rem; background-color: #4287f5; color: white; text-decoration: none; border-radius: 4px;">Open Book</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="carousel-nav-books right-nav-books">&gt;</div>
+        </div>
+
+        <!-- News Section -->
+        <div class="header">News Updates</div>
+        <div class="carousel-container">
+            <div class="carousel-nav left-nav">&lt;</div>
+            <div class="carousel">
+                <!-- News Cards -->
+                {% for i, news in enumerate(articles) %}
+                <div class="card" style="background-color: #fffafe; border: 0.1px solid #d6d4d6; padding: 1rem; border-radius: 10px; box-shadow: 2px 2px 3px rgba(0,0,0,0.1); text-align: center; width: 250px;">
+                    <div class="card-image">
+                        <img src="{{ news.image }}" alt="Image" style="width: 100%; height: auto; border-radius: 10px;">
+                    </div>
+                    <div class="card-content">
+                        <h3 style="color: #333; font-weight: bold;">{{ news.title }}</h3>
+                        <p>{{ news.pubDate }}</p>
+                        <p hidden>{{ news.summary }}</p>
+                        <a href="{{ news.link }}" target="_blank" style="display: inline-block; padding: 0.5rem 1rem; background-color: #b3b3b3; color: white; text-decoration: none; border-radius: 4px;">Open</a>
+                        <button onclick="saveToNotes({{ i }})" style="display: inline-block; padding: 0.5rem 1rem; background-color: #4287f5; color: white; text-decoration: none; border-radius: 4px;">Save to Notes</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="carousel-nav right-nav">&gt;</div>
+        </div>
+
+        <!-- Video Section -->
+        <div class="header">Video Feed</div>
+        <div class="carousel-containerv">
+            <div class="carousel-navv left-navv">&lt;</div>
+            <div class="carouselv">
+                <!-- Video Cards -->
+                {% for i, videoitem in enumerate(videos) %}
+                <div class="cardv" style="background-color: #fffafe; border: 0.1px solid #d6d4d6; padding: 1rem; border-radius: 10px; box-shadow: 2px 2px 3px rgba(0,0,0,0.1); text-align: center; width: 250px;">
+                    <div class="card-image">
+                        <img src="{{ videoitem.image }}" alt="Image" style="width: 100%; height: auto; border-radius: 10px;">
+                    </div>
+                    <div class="card-content">
+                        <h3 style="color: #333; font-weight: bold;">{{ videoitem.title }}</h3>
+                        <p>{{ videoitem.channel }}</p>
+                        <a href="{{ videoitem.video_link }}" target="_blank" style="display: inline-block; padding: 0.5rem 1rem; background-color: #b3b3b3; color: white; text-decoration: none; border-radius: 4px;">Open</a>
+                        <button onclick="saveToNotesv({{ i }})" style="cursor:pointer; display: inline-block; padding: 0.5rem 1rem; background-color: #4287f5; color: white; text-decoration: none; border-radius: 4px;">Save to Notes</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="carousel-navv right-navv">&gt;</div>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div id="status-bar">Saved to Notes!</div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let currentPosition = 0;
+        const carousel = document.querySelector('.carousel');
+        const cards = document.querySelectorAll('.card');
+        const cardWidth = cards[0].offsetWidth + 10;
+        const visibleCards = 3;
+        const maxScroll = cardWidth * (cards.length - visibleCards);
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(${-currentPosition}px)`; // Fix the missing backticks
+        }
+
+        document.querySelector('.left-nav').addEventListener('click', function() {
+            if (currentPosition > 0) {
+                currentPosition -= cardWidth;
+                updateCarousel();
+            }
+        });
+
+        document.querySelector('.right-nav').addEventListener('click', function() {
+            if (currentPosition < maxScroll) {
+                currentPosition += cardWidth;
+                updateCarousel();
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let currentPositionv = 0;
+        const carouselv = document.querySelector('.carouselv');
+        const cardsv = document.querySelectorAll('.cardv');
+        const cardWidthv = cardsv[0].offsetWidth + 10;
+        const visibleCardsv = 3;
+        const maxScrollv = cardWidthv * (cardsv.length - visibleCardsv);
+
+        function updateCarouselv() {
+            carouselv.style.transform = `translateX(${-currentPositionv}px)`; // Fix the missing backticks
+        }
+
+        document.querySelector('.left-navv').addEventListener('click', function() {
+            if (currentPositionv > 0) {
+                currentPositionv -= cardWidthv;
+                updateCarouselv();
+            }
+        });
+
+        document.querySelector('.right-navv').addEventListener('click', function() {
+            if (currentPositionv < maxScrollv) {
+                currentPositionv += cardWidthv;
+                updateCarouselv();
+            }
+        });
+
+        let currentPositionBooks = 0;
+        const carouselBooks = document.querySelector('.carousel-books');
+        const cardsBooks = document.querySelectorAll('.card-books');
+        const cardWidthBooks = cardsBooks[0].offsetWidth + 10;
+        const visibleCardsBooks = 3;
+        const maxScrollBooks = cardWidthBooks * (cardsBooks.length - visibleCardsBooks);
+
+        function updateCarouselBooks() {
+            carouselBooks.style.transform = `translateX(${-currentPositionBooks}px)`; // Fix the missing backticks
+        }
+
+        document.querySelector('.left-nav-books').addEventListener('click', function() {
+            if (currentPositionBooks > 0) {
+                currentPositionBooks -= cardWidthBooks;
+                updateCarouselBooks();
+            }
+        });
+
+        document.querySelector('.right-nav-books').addEventListener('click', function() {
+            if (currentPositionBooks < maxScrollBooks) {
+                currentPositionBooks += cardWidthBooks;
+                updateCarouselBooks();
+            }
+        });
+
+        // Save news article to notes
+        window.saveToNotes = function(index) {
+            fetch(`/updatenotes?index=${index}`, {
+                method: 'POST'
+            }).then(response => response.json())
+              .then(data => {
+                  alert(`Article saved! Total notes: ${data.notes_count}`); // Fixed missing backticks and quotes
+              });
+        };
+
+        // Save video to notes
+        window.saveToNotesv = function(index) {
+            fetch(`/updatenotesv?index=${index}`, {
+                method: 'POST'
+            }).then(response => response.json())
+              .then(data => {
+                  alert(`Video saved! Total notes: ${data.notes_count}`); // Fixed missing backticks and quotes
+              });
+        };
+
+        // Open book and display chapters
+        window.openBook = function(bookName) {
+            window.location.href = `/books/${bookName}`; // Fixed quotes and proper template literal
+        };
+
+        // Create notes via AJAX
+        document.getElementById('create-notes-btn').addEventListener('click', function() {
+            fetch('/create_pages', {
+                method: 'POST'
+            }).then(response => {
+                if (response.ok) {
+                    const statusBar = document.getElementById('status-bar');
+                    statusBar.style.display = 'block';
+                    statusBar.innerText = 'Notes successfully created!';
+                    setTimeout(() => {
+                        statusBar.style.display = 'none';
+                    }, 3000);
+                } else {
+                    alert('Error creating notes.');
+                }
+            });
+        });
+
+        // To set "Home" button as selected by default
+        $(document).ready(function() {
+            $('.sidebar button').removeClass('selected');
+            $('.sidebar button:first').addClass('selected');
+        });
+
+        // Function to show status bar when saving to notes
+        function saveToNotes(index) {
+            document.getElementById('status-bar').style.display = 'block';
+            setTimeout(function () {
+                document.getElementById('status-bar').style.display = 'none';
+            }, 2000);
+        }
+    });
+</script>
+
+</body>
+</html>

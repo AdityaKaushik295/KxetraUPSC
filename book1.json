@@ -1,0 +1,47 @@
+{
+    "book_name": "The Indian Economy by Sanjiv Verma",
+    "book_image": "static/book1.png",
+    "chapters": [
+        {
+            "title": "Chapter 1: Output of an Economy",
+            "url": "https://www.notion.so/8ed1e477773a45e39e355a67dcefd526"
+        },
+        {
+            "title": "Chapter 2:  Towards Inclusive Growth",
+            "url": "https://www.notion.so/75bc986504634b0eb71d456a0bff4966"
+        },
+        {
+            "title": "Chapter 3:  Sustainable Development and Climate Change",
+            "url": "https://www.notion.so/718ebf8a2a244a70a80c911a061da70e"
+        },
+        {
+            "title": "Chapter 4:  Poverty and Social Sector",
+            "url": "https://www.notion.so/1c73ba6fa7a449c8b402df337c137122"
+        },
+        {
+            "title": "Chapter 5:  Food Security",
+            "url": "https://www.notion.so/238f30481138451d8915fb3c4d94ef49"
+        },
+        {
+            "title": "Chapter 6:  Agriculture Sector",
+            "url": "https://www.notion.so/05ba8791869f4c97b23de6c15f70f108"
+        },
+        {
+            "title": "Chapter 7:  Land Reforms",
+            "url": "https://www.notion.so/e76727b54ff44ac9acab40cb4f649f3b"
+        },
+        {
+            "title": "Chapter 8:  Salient Features",
+            "url": "https://www.notion.so/7e9dac15535d4a65a922de00b3e10858"
+        },
+        {
+            "title": "Chapter 9:  Industrial Sector and Liberalization",
+            "url": "https://www.notion.so/4725a001345a4944b458d94b3ba739b7"
+        },
+        {
+            "title": "Chapter 10:  Infrastructure Development",
+            "url": "https://www.notion.so/ad03e9f614a04eb6a9f3fd497696a325"
+        }
+    ]
+}
+

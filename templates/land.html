@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UPSC Learning Platform</title>
+  <style>
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+
+  /* Landing Header */
+  .landing-header {
+    background: linear-gradient(to right, rgba(0,0,0,0), teal), linear-gradient(to right, rgba(255,0,100,.3), rgba(255,100,127,.2)), linear-gradient(to top right, yellow, rgba(0,0,0,0)), radial-gradient(closest-corner at 20% 80%, yellow, red);
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+  }
+
+  .landing-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .landing-header p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .login-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .login-btn, .signup-btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .signup-btn {
+    background-color: #28a745;
+  }
+
+  .login-btn:hover, .signup-btn:hover {
+    opacity: 0.9;
+  }
+
+  /* Feature Sections */
+  .feature-section {
+    height: 100vh;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .feature-section:nth-child(even) {
+    background-color: #fff;
+  }
+
+  .feature-image {
+    width: 300px;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .feature-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #007bff;
+  }
+
+  .feature-content p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    line-height: 1.6;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #333;
+    color: white;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .landing-header h1 {
+      font-size: 2.5rem;
+    }
+
+    .landing-header p {
+      font-size: 1.2rem;
+    }
+
+    .feature-section h2 {
+      font-size: 2rem;
+    }
+
+    .feature-section p {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+
+    .feature-image {
+      width: 80%;
+    }
+  }
+  /* Scroll Down Section */
+/* Scroll Down Section */
+.scroll-down {
+    position: absolute;
+    bottom: 40px; /* Adjust to move up or down */
+    left: 38%;
+    transform: translateX(-100%);
+    font-size: 1.2rem;
+    color: white;
+    animation: bounce 2s infinite;
+  }
+
+  /* Simple bouncing animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+  }
+
+  /* Optional: if the header has relative positioning */
+  .landing-header {
+    position: relative;
+    height: 100vh;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <header class="landing-header">
+    <div class="overlay">
+      <h1>Welcome to UPSC Prep</h1>
+      <p>Your one-stop platform for all UPSC preparation needs</p>
+      <div class="login-buttons">
+        <button class="login-btn">Login</button>
+        <button class="signup-btn">Sign Up</button>
+      </div>
+       <div class="scroll-down">
+        <p>Scroll down to know some crazy features</p>
+      </div>
+    </div>
+
+  </header>
+
+
+  <section class="feature-section" id="newsfeed">
+    <img src="images/newsfeed.svg" alt="Newsfeed Image" class="feature-image">
+    <div class="feature-content">
+      <h2>Newsfeed</h2>
+      <p>Stay updated with the latest UPSC news and updates. Our newsfeed curates the most relevant articles, notifications, and important announcements related to UPSC. From current affairs to exam pattern changes, you will never miss a critical update.</p>
+    </div>
+  </section>
+
+  <section class="feature-section" id="quiz">
+    <img src="images/quiz.svg" alt="Quiz Image" class="feature-image">
+    <div class="feature-content">
+      <h2>Quiz</h2>
+      <p>Test your knowledge with daily quizzes designed for UPSC aspirants. Each quiz is tailored to focus on different topics including History, Polity, Geography, and General Science. Track your performance and improve your scores with instant feedback and solutions.</p>
+    </div>
+  </section>
+
+  <section class="feature-section" id="notion-notes">
+    <img src="images/notion_notes.svg" alt="Notion Notes Image" class="feature-image">
+    <div class="feature-content">
+      <h2>Notion Notes</h2>
+      <p>Organize your study material efficiently with Notion integration. Create custom notes, collaborate with other learners, and access structured resources that are divided chapter-wise for easy navigation. Never lose track of your study progress again.</p>
+    </div>
+  </section>
+
+  <section class="feature-section" id="video-library">
+    <img src="images/videos.svg" alt="Videos Image" class="feature-image">
+    <div class="feature-content">
+      <h2>Video Library</h2>
+      <p>Access in-depth lectures and tutorials by UPSC experts. Our video library covers every subject in the syllabus, from introductory concepts to advanced topics. Each video is paired with supplementary materials, ensuring a comprehensive learning experience.</p>
+    </div>
+  </section>
+
+  <section class="feature-section" id="study-material">
+    <img src="images/study_material.svg" alt="Study Material Image" class="feature-image">
+    <div class="feature-content">
+      <h2>Study Material</h2>
+      <p>Rich library with chapter-wise revision notes and standard UPSC materials. Our study material is meticulously organized to help you focus on key concepts, with chapter summaries, practice questions, and exam-oriented preparation guides for efficient learning.</p>
+    </div>
+  </section>
+
+
+  <footer>
+
+  </footer>
+
+  <script>
+document.querySelector('.login-btn').addEventListener('click', function() {
+    window.location.href = '/login'; // Redirect to the login page
+});
+
+document.querySelector('.signup-btn').addEventListener('click', function() {
+    window.location.href = '/login'; // Redirect to the signup page
+});
+
+
+  </script>
+</body>
+</html>
