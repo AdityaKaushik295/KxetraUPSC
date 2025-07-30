@@ -4,8 +4,8 @@ from youtube_transcript_api import YouTubeTranscriptApi
 import google.generativeai as genai
 
 
-genai.configure(api_key='AIzaSyDlpNp8jEAPmkim1qu4rrTF8naP1VbwcYg')
-model = genai.GenerativeModel("gemini-1.5-flash")
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+model = genai.GenerativeModel("gemini-2.0-flash-exp")
 
 
 
@@ -76,7 +76,7 @@ def createNotionNotes(text_array):
 def buildvideofeed(feed_url):
     # Parse the RSS feed
     feed = feedparser.parse(feed_url)
-
+    
     # Prepare a list to hold the video details
     videos = []
 
@@ -107,6 +107,7 @@ def buildvideofeed(feed_url):
 def buildvideosummary(video_id):
     try:
         transcript = YouTubeTranscriptApi.get_transcript(video_id)
+        print(transcript)
     except Exception as e:
         print(f"An error occurred while getting transcript: {e}")
         return None
@@ -115,7 +116,7 @@ def buildvideosummary(video_id):
         transcript_text=transcript_text+" "+item["text"]
 
     if transcript_text:
-        response = model.generate_content(f"Read the youtube video transcript I will be enclosing at the end. Give me a complete hyper detailed yet summarised ONE page notes. Use double hash ## symbols for title, double asterisk ** for subheadings, single asterisks * for bullet points and single dollar $ for paragraphs. (VERY IMPORTANT) Do not use formating for bold or these special symbols inside each of any these blocks in between the lines.Use these symbols only to enclose a line or a heading. (VERY IMPORTANT) Make sure that all blocks which can be headings, paragraphs or bullet points are seperated by newline seperator to put them on different lines. (VERY IMPORTANT) Do not use any special character other than commas (,) and periods (.) inside the blocks. Using special charcters like single or double quotes within the text blocks can break the program. (VERY IMPORTANT) Do not use single quotes or double quotes at any cost anywhere within the text.Do not start a new block on the same line. Use a good ratio of bullet point lines. Now make the notes on the youtube transcript: {transcript} . Make sure you do not include any personal content about the channel or youtuber. These notes are strictly for educational purposes.")
+        response = model.generate_content(f"Read the youtube video transcript I will be enclosing at the end. Give me a complete hyper detailed yet summarised HALF PAGE notes. Use double hash ## symbols for title, double asterisk ** for subheadings, single asterisks * for bullet points and single dollar $ for paragraphs. (VERY IMPORTANT) Do not use formating for bold or these special symbols inside each of any these blocks in between the lines.Use these symbols only to enclose a line or a heading. (VERY IMPORTANT) Make sure that all blocks which can be headings, paragraphs or bullet points are seperated by newline seperator to put them on different lines. (VERY IMPORTANT) Do not use any special character other than commas (,) and periods (.) inside the blocks. Using special charcters like single or double quotes within the text blocks can break the program. (VERY IMPORTANT) Do not use single quotes or double quotes at any cost anywhere within the text.Do not start a new block on the same line. Use a good ratio of bullet point lines. Now make the notes on the youtube transcript: {transcript} . Make sure you do not include any personal content about the channel or youtuber. These notes are strictly for educational purposes.")
 
     #print(response.text)
     text = response.text

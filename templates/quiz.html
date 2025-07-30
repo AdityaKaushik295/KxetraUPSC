@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/style.css"> <!-- External CSS for sidebar and other styles -->
 </head>
 <body>
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <span class="heading">
-            <img src="pictures/logo.png" alt="Logo"> kxetra
-        </span>
+        <span class="heading"><img src="pictures/logo.png" alt="Logo"> kxetra</span>
         <span class="heading2">upsc</span>
+
         <div class="nav-buttons">
             <button onclick="window.location.href='/home'">
                 <img src="pictures/home-icon.png" alt="Home Icon"> Home
@@ -25,14 +25,20 @@
             <button onclick="window.location.href='/videofeed'">
                 <img src="pictures/video-icon.png" alt="Video Icon"> Videofeed
             </button>
-            <button onclick="window.location.href='/library'">
+            <button class="selected" onclick="window.location.href='/library'">
                 <img src="pictures/library-icon.png" alt="Library Icon"> Library
             </button>
-            <button class="selected" onclick="window.location.href='/tests'">
+            <button onclick="window.location.href='/tests'">
                 <img src="pictures/tests-icon.png" alt="Tests Icon"> Tests
             </button>
+            <button onclick="window.location.href='/interview'">
+                <img src="" alt="Interview Icon"> Interview
+            </button>
+            <button onclick="window.location.href='/calendar'">
+                <img src="" alt="Calendar Icon"> Calendar
+            </button>
         </div>
-        <button id="create-notes-btn">Create Notes</button>
+        <button id="create-notes-btn">Create Notion Notes</button>
     </div>
    <div class="maincontent1">
     <div class="profile">
@@ -85,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function loadQuestion(questionId) {
-    fetch(`/get_question/${questionId}`)
+    fetch(`get_question/${questionId}`)
         .then(response => response.json())
         .then(data => {
             if (!data.error) {
@@ -128,7 +134,7 @@ function checkAnswer() {
     if (selectedOption) {
         let selectedAnswer = selectedOption.value;
 
-        fetch('/check_answer', {
+        fetch('check_answer', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ question_id: currentQuestion, selected_answer: selectedAnswer })

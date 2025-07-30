@@ -1,11 +1,10 @@
 import requests
 from lxml import etree
 from bs4 import BeautifulSoup
-import json
 
 def buildnewsfeed():
-    # URL of the RSS feed
-    rss_url = 'https://www.republicworld.com/rss/india.xml'
+    # Times of India India News RSS Feed
+    rss_url = 'https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms'
 
     # Fetch the RSS feed content
     response = requests.get(rss_url)
@@ -14,37 +13,30 @@ def buildnewsfeed():
     # Parse the RSS feed using lxml
     root = etree.fromstring(rss_content)
 
-    # Function to extract the summary from CDATA content
+    # Function to extract plain text from CDATA/HTML content
     def extract_summary_from_cdata(cdata_content):
         soup = BeautifulSoup(cdata_content, 'html.parser')
-        paragraphs = soup.find_all('p')
-        text = ""
-        if paragraphs:
-            for para in paragraphs:
-                text = text + para.get_text().strip()
-                return text
-        return 'Summary not available'
+        text = soup.get_text(separator=' ', strip=True)
+        return text if text else 'Summary not available'
 
-    # Iterate through the RSS feed items
+    # Extract items
     items = root.xpath('//item')
     articles = []
-    i = 0
-    for item in items:
-        i += 1
-        if i > 50:
-            break
+    for i, item in enumerate(items[:50]):
         title = item.findtext('title')
         link = item.findtext('link')
         pub_date = item.findtext('pubDate')
         description = item.findtext('description')
 
-        content_encoded_element = item.find('{http://purl.org/rss/1.0/modules/content/}encoded')
-        content_encoded = content_encoded_element.text if content_encoded_element is not None else description
+        # Clean up description (usually in CDATA with tags)
+        summary = extract_summary_from_cdata(description)
 
-        summary = extract_summary_from_cdata(content_encoded)
-
-        image = item.xpath('media:thumbnail/@url', namespaces={"media": "http://search.yahoo.com/mrss/"})
-        image_url = image[0] if image else ''
+        # TOI RSS feeds don’t have images in media:thumbnail, so we'll skip image unless extracted from description
+        image_url = ''
+        soup = BeautifulSoup(description, 'html.parser')
+        img = soup.find('img')
+        if img and img.get('src'):
+            image_url = img['src']
 
         articles.append({
             'title': title,
@@ -55,4 +47,7 @@ def buildnewsfeed():
         })
 
     return articles
-#print(buildnewsfeed())
+
+# Example usage:
+# articles = buildnewsfeed()
+# for art in articles[:5]: print(art['title'], art['link'])

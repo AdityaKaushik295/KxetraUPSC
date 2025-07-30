@@ -1,0 +1,13 @@
+Flask==2.2.5
+httpx==0.24.1
+oauthlib==3.2.2
+notion-client==2.0.0
+mysql-connector-python==8.0.5
+feedparser==6.0.10
+youtube-transcript-api==0.6.1
+google-generativeai==0.8.4
+gradio==3.39.0
+groq==0.9.0
+gTTS==2.3.2
+lxml==4.9.3
+beautifulsoup4==4.12.2

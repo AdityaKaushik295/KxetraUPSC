@@ -1,0 +1,290 @@
+{
+    "book_name": "Disha PYQs",
+    "chapters": [
+        {
+            "chapter_name": "Medieval History",
+            "mcqs": [
+                {
+                    "question": "The Mughal school of painting formed the spinal column of different schools of Indian miniature art. Which one of the following painting styles was not affected by Mughal painting?",
+                    "options": [
+                        "Pahari",
+                        "Rajasthani",
+                        "Kangra",
+                        "Kalighata"
+                    ],
+                    "answer": "Kalighata"
+                },
+                {
+                    "question": "Who among the following were famous jurists of medieval India?",
+                    "options": [
+                        "Vijnanesvara",
+                        "Hemadri",
+                        "Rajasekhara",
+                        "Jimutavahana"
+                    ],
+                    "answer": "1, 2 and 4"
+                },
+                {
+                    "question": "Which one of the following monuments has a dome which is said to be one of the largest in the world?",
+                    "options": [
+                        "Tomb of Sher Shah, Sasaram",
+                        "Jama Masjid, Delhi",
+                        "Tomb of Ghiyas-ud-din Tughlaq, Delhi",
+                        "Gol Gumbaz, Bijapur"
+                    ],
+                    "answer": "Gol Gumbaz, Bijapur"
+                },
+                {
+                    "question": "Ashtapradhan was a council of ministers:",
+                    "options": [
+                        "in the Gupta administration",
+                        "in the Chola administration",
+                        "in the Vijayanagar administration",
+                        "in the Maratha administration"
+                    ],
+                    "answer": "in the Maratha administration"
+                },
+                {
+                    "question": "The term 'Apabhramsa' was used in medieval Sanskrit texts to denote:",
+                    "options": [
+                        "outcastes among the Rajputs",
+                        "deviations from Vedic rituals",
+                        "early forms of some of the modern Indian language",
+                        "non-Sanskrit verse metres"
+                    ],
+                    "answer": "early forms of some of the modern Indian language"
+                },
+                {
+                    "question": "Nastaliq was:",
+                    "options": [
+                        "a persian script used in medieval India",
+                        "a raga composed by Tansen",
+                        "a cess levied by the Mughal rulers",
+                        "a manual of code of conduct for the Ulemas"
+                    ],
+                    "answer": "a persian script used in medieval India"
+                },
+                {
+                    "question": "The sufi saint who maintained that devotional music was one way of coming close to God was; ",
+                    "options": [
+                        "Muin-ud-din Chisti",
+                        "Baba Farid",
+                        "Saiyid Muhammad Gesudaraz",
+                        "Shah Alam Bukhari"
+                    ],
+                    "answer": "Muin-ud-din Chisti"
+                },
+                {
+                    "question": "Mughal painting reached its zenith under:",
+                    "options": [
+                        "Humayun",
+                        "Akbar",
+                        "Jahangir",
+                        "Shahjahan"
+                    ],
+                    "answer": "Jahangir"
+                },
+                {
+                    "question": "In medieval India, Mansabdari system was introduced for:",
+                    "options": [
+                        "making recruitment to the army",
+                        "facilitating revenue collection",
+                        "ensuring religious harmony",
+                        "effecting clean administration"
+                    ],
+                    "answer": "making recruitment to the army"
+                },
+                {
+                    "question": "Which of the following pairs is correctly matched?",
+                    "options": [
+                        "Guru Amar Das\u2013Miri and Piri",
+                        "Guru Arjun Dev\u2013Adi Granth",
+                        "Guru Ram Das\u2013Dal Khalsa",
+                        "Guru Gobind Singh\u2013 Manji"
+                    ],
+                    "answer": "Guru Arjun Dev\u2013Adi Granth"
+                },
+                {
+                    "question": "Prem Vatika, poems on the life of Krishna, were composed by :",
+                    "options": [
+                        "Bihari",
+                        "Surdas",
+                        "Raskhan",
+                        "Kabir"
+                    ],
+                    "answer": "Surdas"
+                },
+                {
+                    "question": "After consolidating his power, Balban assumed the grand title of :",
+                    "options": [
+                        "Tute-Hind",
+                        "Kaisr-I-Hind",
+                        "Zil-I-Ilahi",
+                        "Din-I-Ilahi"
+                    ],
+                    "answer": "Kaisr-I-Hind"
+                },
+                {
+                    "question": "Head of the military department under the recognised central machinery of administration during Akbar's reign was:",
+                    "options": [
+                        "Diwan",
+                        "Mir Bakshi",
+                        "Mir Saman",
+                        "Bakshi"
+                    ],
+                    "answer": "Mir Bakshi"
+                },
+                {
+                    "question": "Assertion (A): The sponsor and the most prominent figure of the Chisti order of Sufis in India is Khwaja Moinuddin Chisti.\nReason (R): The Chisti order takes its name from a village Chisti in Ajmer.\nIn the context of the above two statements, which one of the following is correct?",
+                    "options": [
+                        "Both A and R are true but R is the correct explanation of A",
+                        "Both A and R are true but R is not the correct explanation of A",
+                        "A is true but R is false",
+                        "A is false but R is true"
+                    ],
+                    "answer": "Both A and R are true but R is the correct explanation of A"
+                },
+                {
+                    "question": "Which one of the following pairs of composers in different languages and their works on the Mahabharata theme is correctly matched?",
+                    "options": [
+                        "Sarladasa\u2013Bengali",
+                        "Kasirama\u2013Oriya",
+                        "Tikkana\u2013Marathi",
+                        "Pampa\u2013Kannada"
+                    ],
+                    "answer": "Pampa\u2013Kannada"
+                },
+                {
+                    "question": "The medieval Indian writer who refers to the discovery of America is : ",
+                    "options": [
+                        "Malik Muhammad Jayasi",
+                        "Amir Khusrau",
+                        "Raskhan",
+                        "Abul Fazl"
+                    ],
+                    "answer": "Abul Fazl"
+                },
+                {
+                    "question": "The member of Shivaji's Ashtapradhan who looked after foreign affairs was:",
+                    "options": [
+                        "Peshwa",
+                        "Sachiv",
+                        "Pandit Rao",
+                        "Sumant"
+                    ],
+                    "answer": "Sumant"
+                },
+                {
+                    "question": "The loss of Qandhar was a big blow to the Mughal empire from the view point of : ",
+                    "options": [
+                        "natural resources",
+                        "buffer territory",
+                        "communication",
+                        "strategic stronghold"
+                    ],
+                    "answer": "strategic stronghold"
+                },
+                {
+                    "question": "Fawazil in the Sultanate period meant:",
+                    "options": [
+                        "extra payment to the nobles",
+                        "revenue assigned in lieu of salary",
+                        "excess amount paid to the exchequer by the Iqtadars",
+                        "illegal exactions extracted from the peasants"
+                    ],
+                    "answer": "extra payment to the nobles"
+                },
+                {
+                    "question": "Sultan of Delhi who is reputed to have built the biggest network of canals in India was:",
+                    "options": [
+                        "Iltutmish",
+                        "Ghiyasuddin Tughlaq",
+                        "Firoz Shah Tughlaq",
+                        "Sikandar Lodi"
+                    ],
+                    "answer": "Firoz Shah Tughlaq"
+                },
+                {
+                    "question": "Assertion (A): At first the Turkish administration in India was essentially military.\nReason (R): The country was parcelled out as 'Iqtas' among leading military leaders.\nIn the context of the above two statements which one of the following is correct?",
+                    "options": [
+                        "Both A and R are true but R is the correct explanation of A",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "A is true but R is false",
+                        "A is false but R is true"
+                    ],
+                    "answer": "Both A and R are true but R is the correct explanation of A"
+                },
+                {
+                    "question": "Assertion (A): During the reign of Shahjahan, Dara Sikoh was sent on expedition to Balkha, Badakhshan and Qandahar.\nReason (R): The expedition sent by Shahjahan to the Middle-East was a marvellous success.\nIn the context of the above two statements which one of the following is correct?",
+                    "options": [
+                        "Both A and R are true but R is the correct explanation of A",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "A is true but R is false",
+                        "A is false but R is true"
+                    ],
+                    "answer": "A is true but R is false"
+                },
+                {
+                    "question": "Consider the following statements: [1998]\nAhadis were those troopers who:\n1. offered their services singly\n2. did not attach themselves to any chief\n3. had the emperor as their immediate colonel\n4. attached themselves to Mirzas\nOf these statements:",
+                    "options": [
+                        "1, 3 and 4 are correct",
+                        "1, 2 and 3 are correct",
+                        "2 and 3 are correct",
+                        "1 and 4 are correct"
+                    ],
+                    "answer": "1, 2 and 3 are correct"
+                },
+                {
+                    "question": "Consider the following: [1998]\n1. Tughlaqabad fort 2. Lodi Garden\n3. Qutab Minar 4. Fatehpur Sikri\nThe correct chronological order in which they were built is :",
+                    "options": [
+                        "3, 1, 4, 2",
+                        "3, 1, 2, 4",
+                        "1, 3, 2, 4",
+                        "1, 3, 4, 2"
+                    ],
+                    "answer": "3, 1, 2, 4"
+                },
+                {
+                    "question": "Match List-I with List-II and select the correct answer using the codes given below the lists: [1998]\nList-I List-II\nA . 1556 1. Battle of Haldi Ghati\nB. 1600 2. Nadir Shah\u2019s capture of\nDelhi\nC. 1686 3. Death of Shivaji\nD. 1739 4. Grant of Charter to\nEast India Company\n5. Accession of Akbar",
+                    "options": [
+                        "A \u2013 3; B \u2013 4; C \u2013 2; D \u2013 1",
+                        "A \u2013 5; B \u2013 4; C \u2013 3; D \u2013 2",
+                        "A \u2013 5; B \u2013 2; C \u2013 1; D \u2013 4",
+                        "A \u2013 1; B \u2013 5; C \u2013 3; D \u2013 2"
+                    ],
+                    "answer": "A \u2013 5; B \u2013 4; C \u2013 3; D \u2013 2"
+                },
+                {
+                    "question": "In the given map, the shaded part represents Akbar's empire at a certain juncture, A stands for an independent country and 'B' marks the site of city. Which one of the following alternative gives all correct information? [1998]",
+                    "options": [
+                        "Akbar in 1557 : (A) Gokunda, (B) Lahore",
+                        "Akbar in 1557 : (A) Khandesh, (B) Multan",
+                        "Akbar in 1605: (A) Gondwana, (B) Multan",
+                        "Akbar in 1605: (A) Gondwana, (B) Lahore"
+                    ],
+                    "answer": "Akbar in 1605: (A) Gondwana, (B) Lahore"
+                },
+                {
+                    "question": "The first writer to use Urdu as the medium of poetic expression was:",
+                    "options": [
+                        "Amir Khusrau",
+                        "Mirza Ghalib",
+                        "Bahadur Shah Zafar",
+                        "Faiz"
+                    ],
+                    "answer": "Amir Khusrau"
+                },
+                {
+                    "question": "To which Lodi Sultan does the given map relate and what town does the site marked. A represent [1999]",
+                    "options": [
+                        "Bahlol Lodi \u2013 Jaunpur",
+                        "Sikandar Lodi \u2013 Aligarh",
+                        "Ibrahim Lodi \u2013 Jaunpur",
+                        "Ibrahim Lodi \u2013 Aligarh"
+                    ],
+                    "answer": "Ibrahim Lodi \u2013 Jaunpur"
+                }
+            ]
+        }
+    ]
+}

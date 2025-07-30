@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aspire - UPSC Study Platform</title>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/htmx.org@1.6.1/dist/htmx.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Manrope', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            background-color: #fbfafa;
             display: flex;
             flex-direction: row;
             min-height: 100vh;
@@ -21,9 +22,8 @@
 
         /* Sidebar */
         .sidebar {
-            width: 300px;
-            background-color: #f0f0f0; /* Light grey background */
-            color: white;
+            width: 250px;
+            background-color: #ffffff;
             height: 100vh;
             padding-top: 20px;
             display: flex;
@@ -33,6 +33,7 @@
             top: 0;
             left: 0;
             z-index: 1000;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
 
         .heading {
@@ -56,139 +57,161 @@
         }
 
         .sidebar img {
-            margin-right: 10px; /* Move the logo to the left of the text */
+            margin-right: 10px;
             width: 40px;
             height: 40px;
-            border-radius: 50%;
+            /*border-radius: 50%;*/
         }
 
         .sidebar button {
             width: 120%;
             padding: 10px;
-            margin: 15px;
-            font-size: 20px;
+            margin: 5px;
+            font-size: 16px;
             background-color: transparent; /* Transparent background */
-            color: #333;
+            color: #aeaeae;
             border: none;
-            border-radius: 5px;
+            border-radius: 15px;
+            font-weight: bold;
             cursor: pointer;
             text-align: left;
             transition: background-color 0.3s ease;
             display: flex;
             gap: 10px;
             justify-content: flex-start;
-            transform: translate(-15%,20%);
+            transform: translate(-15%, -450%);
+            font-family: 'Manrope', sans-serif;
         }
 
         .sidebar button img {
-            width: 20px; /* Adjust icon size */
+            width: 20px;
             height: 20px;
-            object-fit: cover; /* Make sure the icons fit well */
-            margin-right: 10px; /* Add space between image and text */
+            /*object-fit: cover;*/
         }
 
         .sidebar button:hover {
-            background-color: rgb(168, 168, 168); /* Grey background on hover */
+            background-color: rgb(168, 168, 168);
+            color: #000000;
         }
 
         .sidebar button.selected {
-            background-color: black; /* Black background when selected */
-            color: white;
+            background-color: #FCFBF9;
+            color: #000000;
+            border: 2px solid #E0E0E0;
+            transform: translate(-15%,-420%);
         }
 
-        /* Positioning of buttons */
         .sidebar .nav-buttons {
             margin-top: auto;
-            margin-bottom: auto;
+            margin-bottom: 20px;
         }
 
         .sidebar #create-notes-btn {
+            text-align: center;
             width: 80%;
-            margin-top: auto;
-            margin-bottom: 40px; /* Place at the bottom */
-            margin-left: 5px;
-            text-align: left;
+            padding: 10px;
+            font-size: 16px;
             background-color: darkgrey;
-            transform: translate(0%,-50%);
-            justify-content: center;
+            color: #000000;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            transform: translate(0%,-100%);
         }
 
-        .sidebar #create-notes-btn:hover{
+        .sidebar #create-notes-btn:hover {
             background-color: grey;
         }
 
         /* Profile and Logout */
         .profile {
-            position: relative;
             display: flex;
+            flex-direction: row; /* Change to row for side-by-side layout */
             align-items: center;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            transform: translate(310%,0%);
-            flex-direction: column;
+            background-color: #FFFFFF; /* White background */
+            padding: 10px 15px; /* Adjust padding for a compact look */
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border-radius: 15px; /* Rounded edges for a capsule look */
+            margin-bottom: 20px; /* Remove extra margins */
+            border: 2px solid #E0E0E0;
         }
 
         .profile img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px; /* Placeholder image to the left of profile name */
+            width: 30px; /* Adjust image size */
+            height: 30px;
+            border-radius: 50%; /* Keep the circular profile picture */
+            margin-right: 10px; /* Space between image and text */
         }
 
         .profile h3 {
-            margin-right: 20px;
-            color: #333;
-            align-items: center;
-            display: flex;
+            color: #000; /* Black text for name */
+            font-size: 16px; /* Slightly smaller font */
+            margin: 0; /* No margin around text */
+            font-weight: bold;
+            transform: translate(0%,-25%);
         }
 
         .profile a {
-            padding: 10px;
-            background-color: transparent; /* Transparent background */
-            color: #333;
+            color: #000; /* Black text for the logout link */
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            transform: translate(70%,-70%);
+            font-size: 14px;
+            margin-left: 5px; /* Space between name and logout link */
+            display: flex;
+            align-items: center;
+            transform: translate(-238%,45%);
+        }
+
+        .profile a::after {
+            content: '>'; /* Add a ">" arrow after Logout text */
+            font-size: 14px;
+            margin-left: 3px;
         }
 
         .profile a:hover {
-            background-color: rgb(211, 211, 211); /* Grey background on hover */
+            text-decoration: underline; /* Underline text on hover */
         }
 
         /* Main Content */
         .main-content {
             flex-grow: 1;
             padding: 20px;
-            margin-left: 280px;
+            margin-left: 250px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-sizing: border-box; /* Include padding and margins in width calculation */
-            overflow-x: hidden; /* Ensure no horizontal scrolling */
+            box-sizing: border-box;
+            overflow-x: hidden;
         }
 
         .header {
             padding: 10px;
-            margin: 10px;
-            font-size: 36px;
+            margin-bottom: 0px;
+            font-size: 32px;
             width: 100%;
-            text-align: left; /* Left-align headers */
-            margin-left: 90px;
+            text-align: left;
+            font-weight: bold;
+            color: #000000;
+            transform: translate(3.5%,0%);
         }
 
         .carousel-container, .carousel-containerv, .carousel-container-books {
-            width: 87%;
+            width: 94%;
             overflow: hidden;
             position: relative;
-            margin-top: 50px; /* Adjust margin to move carousel down */
+            margin-top: 10px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 2px solid #E0E0E0;
         }
 
         .carousel, .carouselv, .carousel-books {
             display: flex;
             transition: transform 0.5s ease-in-out;
             padding-left: 50px;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
+            padding-top: 20px;
         }
 
         /* Cards */
@@ -215,6 +238,7 @@
         h2 {
             font-weight: bold;
             font-size: 1.5rem;
+            color: #333;
         }
 
         /* Navigation */
@@ -257,44 +281,117 @@
             display: none;
             z-index: 100;
         }
+
+        /* Main Banner */
+        .main-banner {
+            width: 93%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FFFFFF;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-right:30px;
+            border-radius: 15px;
+            transform: translate(2%,0%);
+            border: 2px solid #E0E0E0;
+        }
+
+        .main-banner .text {
+            max-width: 60%;
+            transform: translate(0%,-10%);
+        }
+
+        .main-banner .text h1 {
+            font-size: 35px;
+            font-weight: bold;
+            color: #000000;
+            margin: 0;
+        }
+
+        .main-banner .text p {
+            font-size: 22px;
+            color: #505050;
+            margin: 10px 0 0 0;
+        }
+
+        .main-banner .image {
+            max-width: 35%;
+        }
+
+        .main-banner .image img {
+            margin-right: 100px;
+        }
+        .red {color:red;}
+        .header-main {
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-text-box {
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            border: 2px solid #E0E0E0;
+            padding: 10px 20px;
+            font-weight : bold;
+        }
     </style>
 </head>
 <body>
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <span class="heading"><img src="pictures/logo.png" alt="Logo"> kxetra</span>
+        <span class="heading"><img src="static/logo2.png" alt="Logo"> kxetra</span>
         <span class="heading2">upsc</span>
 
         <div class="nav-buttons">
-            <button class="selected" onclick="window.location.href='/home'">
-                <img src="pictures/home-icon.png" alt="Home Icon"> Home
+
+            <button class="selected" onclick="window.location.href='home'">
+                <img src="static/home-icon.png" alt="Home Icon"> Home
             </button>
-            <button onclick="window.location.href='/newsfeed'">
-                <img src="pictures/news-icon.png" alt="News Icon"> Newsfeed
+            <button onclick="window.location.href='newsfeed'">
+                <img src="static/news-icon.png" alt="News Icon"> Newsfeed
             </button>
-            <button onclick="window.location.href='/videofeed'">
-                <img src="pictures/video-icon.png" alt="Video Icon"> Videofeed
+            <button onclick="window.location.href='videofeed'">
+                <img src="static/video-icon.png" alt="Video Icon"> Videofeed
             </button>
-            <button onclick="window.location.href='/library'">
-                <img src="pictures/library-icon.png" alt="Library Icon"> Library
+            <button onclick="window.location.href='library'">
+                <img src="static/library-icon.png" alt="Library Icon"> Library
             </button>
-            <button onclick="window.location.href='/tests'">
-                <img src="pictures/tests-icon.png" alt="Tests Icon"> Tests
+            <button onclick="window.location.href='tests'">
+                <img src="static/tests-icon.png" alt="Tests Icon"> Tests
+            </button>
+            <button onclick="window.location.href='interview'">
+                <img src="static/calendar-icon.png" alt="Interview Icon"> Interview
+            </button>
+            <button onclick="window.location.href='calendar'">
+                <img src="static/calendar-icon.png" alt="Calendar Icon"> Calendar
             </button>
         </div>
-
-        <button id="create-notes-btn">Create Notes</button>
+        <button id="create-notes-btn">Create Notion Notes</button>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
-
+        <div class="header-main">
+            <div class="header-text-box">Get Kxetra Pro and unlock Premium features to supercharge your prep!</div>
         <!-- Profile and Logout -->
         <div class="profile">
             <!--<img src="profile-placeholder.png" alt="Profile Picture">--> <!-- Placeholder for profile picture -->
-            <h3> <img src=" {{profilepic}} " alt="Profile Picture">{{username}}</h3>
+            <img src={{profilepic}} alt="Profile Picture"><h3>Adithya Acharya</h3>
             <a href="/logout">Logout</a>
+        </div>
+        </div>
+
+        <div class="main-banner">
+            <div class="text">
+                <h1>Start <span class = "red">Today</span>, Achieve Tomorrow</h1>
+                <p>Your Journey to UPSC Success Begins Here</p>
+            </div>
+            <div class="image">
+                <img src="static/rocket-bulb.png" alt="Banner">
+            </div>
         </div>
 
         <!-- Library Section -->
@@ -370,7 +467,7 @@
     <div id="status-bar">Saved to Notes!</div>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
         let currentPosition = 0;
         const carousel = document.querySelector('.carousel');
         const cards = document.querySelectorAll('.card');
@@ -450,7 +547,7 @@
 
         // Save news article to notes
         window.saveToNotes = function(index) {
-            fetch(`/updatenotes?index=${index}`, {
+            fetch(`updatenotes?index=${index}`, {
                 method: 'POST'
             }).then(response => response.json())
               .then(data => {
@@ -460,7 +557,7 @@
 
         // Save video to notes
         window.saveToNotesv = function(index) {
-            fetch(`/updatenotesv?index=${index}`, {
+            fetch(`updatenotesv?index=${index}`, {
                 method: 'POST'
             }).then(response => response.json())
               .then(data => {
@@ -470,12 +567,12 @@
 
         // Open book and display chapters
         window.openBook = function(bookName) {
-            window.location.href = `/books/${bookName}`; // Fixed quotes and proper template literal
+            window.location.href = `books/${bookName}`; // Fixed quotes and proper template literal
         };
 
         // Create notes via AJAX
         document.getElementById('create-notes-btn').addEventListener('click', function() {
-            fetch('/create_pages', {
+            fetch('create_pages', {
                 method: 'POST'
             }).then(response => {
                 if (response.ok) {

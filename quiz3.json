@@ -1,0 +1,1143 @@
+{
+    "book_name": "Disha PYQs",
+    "chapters": [
+        {
+            "chapter_name": "Ancient History",
+            "mcqs": [
+                {
+                    "question": "The word 'Hindu' as reference to the people of 'Hind' (India) was first used by: ",
+                    "options": [
+                        "the Chinese",
+                        "the Greeks",
+                        "the Arabs",
+                        "the Romans"
+                    ],
+                    "answer": "the Greeks"
+                },
+                {
+                    "question": "Who among the following was the Brahmavadini who composed the famous commentary 'Bhashya' on the Vedic codes (eras) ? ",
+                    "options": [
+                        "Ahalya Bai",
+                        "Lopamudra",
+                        "Gargi",
+                        "Savitri"
+                    ],
+                    "answer": "Gargi"
+                },
+                {
+                    "question": "Match List-I (Eras) with List-II (Reckoned from) and select the correct answer using the codes given below: ",
+                    "options": [
+                        "A-4-B-1-C-2-D-3",
+                        "A-4-B-3-C-2-D-1",
+                        "A-4-B-2-C-1-D-3",
+                        "A-4-B-3-C-1-D-2"
+                    ],
+                    "answer": "A-4-B-3-C-2-D-1"
+                },
+                {
+                    "question": "During the Gupta period, women: ",
+                    "options": [
+                        "did not play any role in society",
+                        "played a significant role in society",
+                        "could not own property",
+                        "were prohibited from receiving education"
+                    ],
+                    "answer": "played a significant role in society"
+                },
+                {
+                    "question": "The Sanskrit by which Ashoka is generally referred to in his  inscriptions is: ",
+                    "options": [
+                        "Dharmakriti",
+                        "Dharmanidhi",
+                        "Dharmaraj",
+                        "Dharmakaya"
+                    ],
+                    "answer": "Dharmakriti"
+                },
+                {
+                    "question": "The term 'Yavanapriya' mentioned in Priyadarshi Sanskrit texts  implies: ",
+                    "options": [
+                        "a fine variety of Indian muslin for dance  performance",
+                        "a variety of sweet grape",
+                        "a fine variety of Indian court",
+                        "a fine variety of the Greek court for dance performance"
+                    ],
+                    "answer": "a fine variety of the Greek court for dance performance"
+                },
+                {
+                    "question": "The concept of 'Anuvrata' was advocated by: ",
+                    "options": [
+                        "Jainism",
+                        "Buddhism",
+                        "Jainism and Buddhism",
+                        "Ahimsa"
+                    ],
+                    "answer": "Jainism"
+                },
+                {
+                    "question": "According to Jainism school of philosophy, liberation is possible by means of: ",
+                    "options": [
+                        "karma",
+                        "bhakti",
+                        "yoga",
+                        "meditation"
+                    ],
+                    "answer": "karma"
+                },
+                {
+                    "question": "Bronze icons of 'Nataraja' during the Chola period generally have: ",
+                    "options": [
+                        "four hands",
+                        "eight hands",
+                        "six hands",
+                        "two hands"
+                    ],
+                    "answer": "four hands"
+                },
+                {
+                    "question": "According to ancient Indian cosmogonic ideas, the sequential order of the cycle of four kalas (yugas) is: ",
+                    "options": [
+                        "Dvapara, Krita, Treta and Kali",
+                        "Krita, Treta, Dvapara and Kali",
+                        "Treta, Kali, Dvapara and Krita",
+                        "Kali, Krita, Treta and Dvapara"
+                    ],
+                    "answer": "Krita, Treta, Dvapara and Kali"
+                },
+                {
+                    "question": "Which one of the following temples figured in the news regarding the institution of the Devadasi ? ",
+                    "options": [
+                        "Kandariya Mahadeva Temple, Khajuraho",
+                        "Kashi Vishwanath Temple, Varanasi",
+                        "Pashupatinath Temple, Kathmandu",
+                        "Khandariya Mahadeva Temple, Khajuraho"
+                    ],
+                    "answer": "Khandariya Mahadeva Temple, Khajuraho"
+                },
+                {
+                    "question": "The river most mentioned in early Vedic literature is: ",
+                    "options": [
+                        "Sindhu",
+                        "Saraswati",
+                        "Ganga",
+                        "Yamuna"
+                    ],
+                    "answer": "Sindhu"
+                },
+                {
+                    "question": "The \u2018A\u2019 (Arthashastra) is a work of: ",
+                    "options": [
+                        "Kautilya",
+                        "Vishnu Sharma",
+                        "Chanakya",
+                        "Baudhayana"
+                    ],
+                    "answer": "Kautilya"
+                },
+                {
+                    "question": "Which of the following is not a part of early Jain literature? ",
+                    "options": [
+                        "Sutrakritanga",
+                        "Acharanga",
+                        "Bhagavati Sutra",
+                        "Kalpasutra"
+                    ],
+                    "answer": "Kalpasutra"
+                },
+                {
+                    "question": "Which one of the following were common to both Buddhism and Jainism? ",
+                    "options": [
+                        "Avoidance of extremes of penance and enjoyment",
+                        "Indifference to the authority of the Vedas",
+                        "Belief in rebirth",
+                        "Denial of efficacy of rituals"
+                    ],
+                    "answer": "Belief in rebirth"
+                },
+                {
+                    "question": "Select the answer using the codes given below: ",
+                    "options": [
+                        "1, 2, 3 and 4",
+                        "1, 2 and 3",
+                        "1 and 3",
+                        "1, 2 and 4"
+                    ],
+                    "answer": "1, 2, 3 and 4"
+                },
+                {
+                    "question": "In the context of ancient Indian society, which one of the following terms does not belong to the category of the sixteen Mahajanapadas that existed in India? ",
+                    "options": [
+                        "Kasi",
+                        "Kosala",
+                        "Anga",
+                        "Magadha"
+                    ],
+                    "answer": "Anga"
+                },
+                {
+                    "question": "The places marked A, B, C and D respectively are: ",
+                    "options": [
+                        "Mataya, Kedka, Vatala, Anga",
+                        "Vatala, Kedka, Mataya, Anga",
+                        "Mataya, Vatala, Kedka, Anga",
+                        "Kedka, Vatala, Mataya, Anga"
+                    ],
+                    "answer": "Mataya, Vatala, Kedka, Anga"
+                },
+                {
+                    "question": "In the Mahyana Buddhism, the Bodhisattva Avalokitesvara  is  represented  with: ",
+                    "options": [
+                        "two hands",
+                        "four hands",
+                        "six hands",
+                        "eight hands"
+                    ],
+                    "answer": "four hands"
+                },
+                {
+                    "question": "The silver coins issued by the Gupta were called: ",
+                    "options": [
+                        "Puranas",
+                        "Dinas",
+                        "Vajranis",
+                        "Manjris"
+                    ],
+                    "answer": "Dinas"
+                },
+                {
+                    "question": "The places given below and the lists, and select the correct answer using the codes given below: ",
+                    "options": [
+                        "A-3-B-4-C-1-D-2",
+                        "A-3-B-1-C-4-D-2",
+                        "A-4-B-3-C-1-D-2",
+                        "A-2-B-4-C-1-D-3"
+                    ],
+                    "answer": "A-3-B-4-C-1-D-2"
+                },
+                {
+                    "question": "What is appeared in India? ",
+                    "options": [
+                        "Iron plough",
+                        "Punch marked silver coins",
+                        "Coin with image",
+                        "Pottery"
+                    ],
+                    "answer": "Punch marked silver coins"
+                },
+                {
+                    "question": "According to the 'A' (Arthashastra) the theme of the Mevapalqta fqnd ravh is? ",
+                    "options": [
+                        "The concept of Eight fold path",
+                        "The theme of Mandala",
+                        "The concept of Dhyana",
+                        "The concept of  Dvadvadvadash",
+                        "The concept of  Dvadvadash",
+                        "The concept of  Dvadvadash",
+                        "The concept of  Dvadvadash"
+                    ],
+                    "answer": "The concept of  Dvadvadash"
+                },
+                {
+                    "question": "The given map relates to: ",
+                    "options": [
+                        "Mahapranatha  Paravartana  Sutta",
+                        "Dhavammkha  Charita",
+                        "Mahapranatha  Paravartana  Sutta",
+                        "Dhavammkha  Charita"
+                    ],
+                    "answer": "Mahapranatha  Paravartana  Sutta"
+                },
+                {
+                    "question": "The places marked A, B, C and D respectively are: ",
+                    "options": [
+                        "African trade",
+                        "West-European trade",
+                        "Middle-Eastern trade",
+                        "South-East Asian trade"
+                    ],
+                    "answer": "West-European trade"
+                },
+                {
+                    "question": "The following persons came to India at one time or another: ",
+                    "options": [
+                        "Fa-Hien",
+                        "Hsuan Tsang",
+                        "I-tsing",
+                        "Hiuen Tsang"
+                    ],
+                    "answer": "I-tsing"
+                },
+                {
+                    "question": "The correct chronological sequence of their visits is: ",
+                    "options": [
+                        "31.4, 2, 1, 3",
+                        "3, 1, 4, 2",
+                        "3, 1, 2, 4",
+                        "2, 1, 3, 4"
+                    ],
+                    "answer": "3, 1, 4, 2"
+                },
+                {
+                    "question": "The state of India in the 6th century BC whose capital city 'Kashi' is located is: ",
+                    "options": [
+                        "Magadha",
+                        "Kasi",
+                        "Vatsa",
+                        "Kosala"
+                    ],
+                    "answer": "Kasi"
+                },
+                {
+                    "question": "The term 'Ayana' denotes: ",
+                    "options": [
+                        "beginning of the second century BC",
+                        "beginning of the second century AD",
+                        "a nomadic people",
+                        "a war"
+                    ],
+                    "answer": "a nomadic people"
+                },
+                {
+                    "question": "Which one of the following ports handled the North Indian trade  during the Gupta period? ",
+                    "options": [
+                        "Tamralipti",
+                        "Borkte",
+                        "Kaveripattinam",
+                        "Bharukaccha"
+                    ],
+                    "answer": "Bharukaccha"
+                },
+                {
+                    "question": "Which one of the following is the correct explanation of A? ",
+                    "options": [
+                        "A is true but R is false",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "A is false but R is true"
+                    ],
+                    "answer": "A is true but R is false"
+                },
+                {
+                    "question": "Which one of the following kinds of farming was mentioned in the form of a dialogue between the king Milindapanho and the monk Nagasena? ",
+                    "options": [
+                        "Jhum cultivation",
+                        "Dry farming",
+                        "Wet cultivation",
+                        "Shifting cultivation"
+                    ],
+                    "answer": "Shifting cultivation"
+                },
+                {
+                    "question": "The given map represents: ",
+                    "options": [
+                        "The  Kalignga Edict",
+                        "The  Asoka Edict",
+                        "The  Ashoka Edict",
+                        "The  Ashoka Edict"
+                    ],
+                    "answer": "The  Ashoka Edict"
+                },
+                {
+                    "question": "Which one of the following is correctly matched? ",
+                    "options": [
+                        "1, 2 and 3",
+                        "1 and 2",
+                        "1 and 3",
+                        "1, 2 and 3"
+                    ],
+                    "answer": "1, 2 and 3"
+                },
+                {
+                    "question": "Which one of the following does not form part of the sixteen Mahajanapadas that existed in India? ",
+                    "options": [
+                        "Kasi",
+                        "Anga",
+                        "Kosala",
+                        "Magadha"
+                    ],
+                    "answer": "Magadha"
+                },
+                {
+                    "question": "The concept that 'King is the representative of the divine  power' was propounded by: ",
+                    "options": [
+                        "Kshatriyas",
+                        "Brahmanas",
+                        "Vaishyas",
+                        "Shudras"
+                    ],
+                    "answer": "Kshatriyas"
+                },
+                {
+                    "question": "The places marked A, B, C and D in the map represent the  following: ",
+                    "options": [
+                        "Kalinga, Andhra, Tamil Nadu, Orissa",
+                        "Kalinga, Tamil Nadu, Andhra, Orissa",
+                        "Kalinga, Orissa, Tamil Nadu, Andhra",
+                        "Orissa, Kalinga, Andhra, Tamil Nadu"
+                    ],
+                    "answer": "Kalinga, Andhra, Tamil Nadu, Orissa"
+                },
+                {
+                    "question": "According to ancient Indian cosmogonic ideas the  cycle of four kalas (yugas) is: ",
+                    "options": [
+                        "432,000, 2,592,000, 1,296,000, 648,000",
+                        "432,000, 1,296,000, 2,592,000, 648,000",
+                        "648,000, 432,000, 1,296,000, 2,592,000",
+                        "2,592,000, 1,296,000, 648,000, 432,000"
+                    ],
+                    "answer": "432,000, 1,296,000, 2,592,000, 648,000"
+                },
+                {
+                    "question": "The places marked A, B, C and D respectively are: ",
+                    "options": [
+                        "African trade",
+                        "West-European trade",
+                        "Middle-Eastern trade",
+                        "South-East Asian trade"
+                    ],
+                    "answer": "South-East Asian trade"
+                },
+                {
+                    "question": "The following persons came to India at one time or another: ",
+                    "options": [
+                        "Fa-Hien",
+                        "Hsuan Tsang",
+                        "I-tsing",
+                        "Hiuen Tsang"
+                    ],
+                    "answer": "I-tsing"
+                },
+                {
+                    "question": "The correct chronological sequence of their visits is: ",
+                    "options": [
+                        "31.4, 2, 1, 3",
+                        "3, 1, 4, 2",
+                        "3, 1, 2, 4",
+                        "2, 1, 3, 4"
+                    ],
+                    "answer": "3, 1, 4, 2"
+                },
+                {
+                    "question": "The state of India in the 6th century BC whose capital city 'Kashi' is located is: ",
+                    "options": [
+                        "Magadha",
+                        "Kasi",
+                        "Vatsa",
+                        "Kosala"
+                    ],
+                    "answer": "Kasi"
+                },
+                {
+                    "question": "The term 'Ayana' denotes: ",
+                    "options": [
+                        "beginning of the second century BC",
+                        "beginning of the second century AD",
+                        "a nomadic people",
+                        "a war"
+                    ],
+                    "answer": "a nomadic people"
+                },
+                {
+                    "question": "Which one of the following ports handled the North Indian trade  during the Gupta period? ",
+                    "options": [
+                        "Tamralipti",
+                        "Borkte",
+                        "Kaveripattinam",
+                        "Bharukaccha"
+                    ],
+                    "answer": "Bharukaccha"
+                },
+                {
+                    "question": "Which one of the following is the correct explanation of A? ",
+                    "options": [
+                        "A is true but R is false",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "A is false but R is true"
+                    ],
+                    "answer": "A is true but R is false"
+                },
+                {
+                    "question": "Which one of the following kinds of farming was mentioned in the form of a dialogue between the king Milindapanho and the monk Nagasena? ",
+                    "options": [
+                        "Jhum cultivation",
+                        "Dry farming",
+                        "Wet cultivation",
+                        "Shifting cultivation"
+                    ],
+                    "answer": "Shifting cultivation"
+                },
+                {
+                    "question": "The given map represents: ",
+                    "options": [
+                        "The  Kalignga Edict",
+                        "The  Asoka Edict",
+                        "The  Ashoka Edict",
+                        "The  Ashoka Edict"
+                    ],
+                    "answer": "The  Ashoka Edict"
+                },
+                {
+                    "question": "Which one of the following is correctly matched? ",
+                    "options": [
+                        "1, 2 and 3",
+                        "1 and 2",
+                        "1 and 3",
+                        "1, 2 and 3"
+                    ],
+                    "answer": "1, 2 and 3"
+                },
+                {
+                    "question": "Which one of the following does not form part of the sixteen Mahajanapadas that existed in India? ",
+                    "options": [
+                        "Kasi",
+                        "Anga",
+                        "Kosala",
+                        "Magadha"
+                    ],
+                    "answer": "Magadha"
+                },
+                {
+                    "question": "The concept that 'King is the representative of the divine  power' was propounded by: ",
+                    "options": [
+                        "Kshatriyas",
+                        "Brahmanas",
+                        "Vaishyas",
+                        "Shudras"
+                    ],
+                    "answer": "Kshatriyas"
+                },
+                {
+                    "question": "The places marked A, B, C and D in the map represent the  following: ",
+                    "options": [
+                        "Kalinga, Andhra, Tamil Nadu, Orissa",
+                        "Kalinga, Tamil Nadu, Andhra, Orissa",
+                        "Kalinga, Orissa, Tamil Nadu, Andhra",
+                        "Orissa, Kalinga, Andhra, Tamil Nadu"
+                    ],
+                    "answer": "Kalinga, Andhra, Tamil Nadu, Orissa"
+                },
+                {
+                    "question": "According to ancient Indian cosmogonic ideas the  cycle of four kalas (yugas) is: ",
+                    "options": [
+                        "432,000, 2,592,000, 1,296,000, 648,000",
+                        "432,000, 1,296,000, 2,592,000, 648,000",
+                        "648,000, 432,000, 1,296,000, 2,592,000",
+                        "2,592,000, 1,296,000, 648,000, 432,000"
+                    ],
+                    "answer": "432,000, 1,296,000, 2,592,000, 648,000"
+                },
+                {
+                    "question": "The places marked A, B, C and D respectively are: ",
+                    "options": [
+                        "African trade",
+                        "West-European trade",
+                        "Middle-Eastern trade",
+                        "South-East Asian trade"
+                    ],
+                    "answer": "South-East Asian trade"
+                },
+                {
+                    "question": "The following persons came to India at one time or another: ",
+                    "options": [
+                        "Fa-Hien",
+                        "Hsuan Tsang",
+                        "I-tsing",
+                        "Hiuen Tsang"
+                    ],
+                    "answer": "I-tsing"
+                },
+                {
+                    "question": "The correct chronological sequence of their visits is: ",
+                    "options": [
+                        "31.4, 2, 1, 3",
+                        "3, 1, 4, 2",
+                        "3, 1, 2, 4",
+                        "2, 1, 3, 4"
+                    ],
+                    "answer": "3, 1, 4, 2"
+                },
+                {
+                    "question": "The state of India in the 6th century BC whose capital city 'Kashi' is located is: ",
+                    "options": [
+                        "Magadha",
+                        "Kasi",
+                        "Vatsa",
+                        "Kosala"
+                    ],
+                    "answer": "Kasi"
+                },
+                {
+                    "question": "The term 'Ayana' denotes: ",
+                    "options": [
+                        "beginning of the second century BC",
+                        "beginning of the second century AD",
+                        "a nomadic people",
+                        "a war"
+                    ],
+                    "answer": "a nomadic people"
+                },
+                {
+                    "question": "Which one of the following ports handled the North Indian trade  during the Gupta period? ",
+                    "options": [
+                        "Tamralipti",
+                        "Borkte",
+                        "Kaveripattinam",
+                        "Bharukaccha"
+                    ],
+                    "answer": "Bharukaccha"
+                },
+                {
+                    "question": "Which one of the following is the correct explanation of A? ",
+                    "options": [
+                        "A is true but R is false",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "A is false but R is true"
+                    ],
+                    "answer": "A is true but R is false"
+                },
+                {
+                    "question": "Which one of the following kinds of farming was mentioned in the form of a dialogue between the king Milindapanho and the monk Nagasena? ",
+                    "options": [
+                        "Jhum cultivation",
+                        "Dry farming",
+                        "Wet cultivation",
+                        "Shifting cultivation"
+                    ],
+                    "answer": "Shifting cultivation"
+                },
+                {
+                    "question": "The given map represents: ",
+                    "options": [
+                        "The  Kalignga Edict",
+                        "The  Asoka Edict",
+                        "The  Ashoka Edict",
+                        "The  Ashoka Edict"
+                    ],
+                    "answer": "The  Ashoka Edict"
+                },
+                {
+                    "question": "Which one of the following is correctly matched? ",
+                    "options": [
+                        "1, 2 and 3",
+                        "1 and 2",
+                        "1 and 3",
+                        "1, 2 and 3"
+                    ],
+                    "answer": "1, 2 and 3"
+                },
+                {
+                    "question": "Which one of the following does not form part of the sixteen Mahajanapadas that existed in India? ",
+                    "options": [
+                        "Kasi",
+                        "Anga",
+                        "Kosala",
+                        "Magadha"
+                    ],
+                    "answer": "Magadha"
+                },
+                {
+                    "question": "The concept that 'King is the representative of the divine  power' was propounded by: ",
+                    "options": [
+                        "Kshatriyas",
+                        "Brahmanas",
+                        "Vaishyas",
+                        "Shudras"
+                    ],
+                    "answer": "Kshatriyas"
+                },
+                {
+                    "question": "The places marked A, B, C and D in the map represent the  following: ",
+                    "options": [
+                        "Kalinga, Andhra, Tamil Nadu, Orissa",
+                        "Kalinga, Tamil Nadu, Andhra, Orissa",
+                        "Kalinga, Orissa, Tamil Nadu, Andhra",
+                        "Orissa, Kalinga, Andhra, Tamil Nadu"
+                    ],
+                    "answer": "Kalinga, Andhra, Tamil Nadu, Orissa"
+                },
+                {
+                    "question": "According to ancient Indian cosmogonic ideas the  cycle of four kalas (yugas) is: ",
+                    "options": [
+                        "432,000, 2,592,000, 1,296,000, 648,000",
+                        "432,000, 1,296,000, 2,592,000, 648,000",
+                        "648,000, 432,000, 1,296,000, 2,592,000",
+                        "2,592,000, 1,296,000, 648,000, 432,000"
+                    ],
+                    "answer": "432,000, 1,296,000, 2,592,000, 648,000"
+                },
+                {
+                    "question": "The places marked A, B, C and D respectively are: ",
+                    "options": [
+                        "African trade",
+                        "West-European trade",
+                        "Middle-Eastern trade",
+                        "South-East Asian trade"
+                    ],
+                    "answer": "South-East Asian trade"
+                },
+                {
+                    "question": "The following persons came to India at one time or another: ",
+                    "options": [
+                        "Fa-Hien",
+                        "Hsuan Tsang",
+                        "I-tsing",
+                        "Hiuen Tsang"
+                    ],
+                    "answer": "I-tsing"
+                },
+                {
+                    "question": "The correct chronological sequence of their visits is: ",
+                    "options": [
+                        "31.4, 2, 1, 3",
+                        "3, 1, 4, 2",
+                        "3, 1, 2, 4",
+                        "2, 1, 3, 4"
+                    ],
+                    "answer": "3, 1, 4, 2"
+                },
+                {
+                    "question": "The state of India in the 6th century BC whose capital city 'Kashi' is located is: ",
+                    "options": [
+                        "Magadha",
+                        "Kasi",
+                        "Vatsa",
+                        "Kosala"
+                    ],
+                    "answer": "Kasi"
+                },
+                {
+                    "question": "The term 'Ayana' denotes: ",
+                    "options": [
+                        "beginning of the second century BC",
+                        "beginning of the second century AD",
+                        "a nomadic people",
+                        "a war"
+                    ],
+                    "answer": "a nomadic people"
+                },
+                {
+                    "question": "Which one of the following ports handled the North Indian trade  during the Gupta period? ",
+                    "options": [
+                        "Tamralipti",
+                        "Borkte",
+                        "Kaveripattinam",
+                        "Bharukaccha"
+                    ],
+                    "answer": "Bharukaccha"
+                },
+                {
+                    "question": "Which one of the following is the correct explanation of A? ",
+                    "options": [
+                        "A is true but R is false",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "A is false but R is true"
+                    ],
+                    "answer": "A is true but R is false"
+                },
+                {
+                    "question": "Which one of the following kinds of farming was mentioned in the form of a dialogue between the king Milindapanho and the monk Nagasena? ",
+                    "options": [
+                        "Jhum cultivation",
+                        "Dry farming",
+                        "Wet cultivation",
+                        "Shifting cultivation"
+                    ],
+                    "answer": "Shifting cultivation"
+                },
+                {
+                    "question": "The given map represents: ",
+                    "options": [
+                        "The  Kalignga Edict",
+                        "The  Asoka Edict",
+                        "The  Ashoka Edict",
+                        "The  Ashoka Edict"
+                    ],
+                    "answer": "The  Ashoka Edict"
+                },
+                {
+                    "question": "Which one of the following is correctly matched? ",
+                    "options": [
+                        "1, 2 and 3",
+                        "1 and 2",
+                        "1 and 3",
+                        "1, 2 and 3"
+                    ],
+                    "answer": "1, 2 and 3"
+                },
+                {
+                    "question": "Which one of the following does not form part of the sixteen Mahajanapadas that existed in India? ",
+                    "options": [
+                        "Kasi",
+                        "Anga",
+                        "Kosala",
+                        "Magadha"
+                    ],
+                    "answer": "Magadha"
+                },
+                {
+                    "question": "The concept that 'King is the representative of the divine  power' was propounded by: ",
+                    "options": [
+                        "Kshatriyas",
+                        "Brahmanas",
+                        "Vaishyas",
+                        "Shudras"
+                    ],
+                    "answer": "Kshatriyas"
+                },
+                {
+                    "question": "The places marked A, B, C and D in the map represent the  following: ",
+                    "options": [
+                        "Kalinga, Andhra, Tamil Nadu, Orissa",
+                        "Kalinga, Tamil Nadu, Andhra, Orissa",
+                        "Kalinga, Orissa, Tamil Nadu, Andhra",
+                        "Orissa, Kalinga, Andhra, Tamil Nadu"
+                    ],
+                    "answer": "Kalinga, Andhra, Tamil Nadu, Orissa"
+                },
+                {
+                    "question": "According to ancient Indian cosmogonic ideas the  cycle of four kalas (yugas) is: ",
+                    "options": [
+                        "432,000, 2,592,000, 1,296,000, 648,000",
+                        "432,000, 1,296,000, 2,592,000, 648,000",
+                        "648,000, 432,000, 1,296,000, 2,592,000",
+                        "2,592,000, 1,296,000, 648,000, 432,000"
+                    ],
+                    "answer": "432,000, 1,296,000, 2,592,000, 648,000"
+                },
+                {
+                    "question": "The places marked A, B, C and D respectively are: ",
+                    "options": [
+                        "African trade",
+                        "West-European trade",
+                        "Middle-Eastern trade",
+                        "South-East Asian trade"
+                    ],
+                    "answer": "South-East Asian trade"
+                },
+                {
+                    "question": "The following persons came to India at one time or another: ",
+                    "options": [
+                        "Fa-Hien",
+                        "Hsuan Tsang",
+                        "I-tsing",
+                        "Hiuen Tsang"
+                    ],
+                    "answer": "I-tsing"
+                },
+                {
+                    "question": "The correct chronological sequence of their visits is: ",
+                    "options": [
+                        "31.4, 2, 1, 3",
+                        "3, 1, 4, 2",
+                        "3, 1, 2, 4",
+                        "2, 1, 3, 4"
+                    ],
+                    "answer": "3, 1, 4, 2"
+                },
+                {
+                    "question": "The state of India in the 6th century BC whose capital city 'Kashi' is located is: ",
+                    "options": [
+                        "Magadha",
+                        "Kasi",
+                        "Vatsa",
+                        "Kosala"
+                    ],
+                    "answer": "Kasi"
+                },
+                {
+                    "question": "The term 'Ayana' denotes: ",
+                    "options": [
+                        "beginning of the second century BC",
+                        "beginning of the second century AD",
+                        "a nomadic people",
+                        "a war"
+                    ],
+                    "answer": "a nomadic people"
+                },
+                {
+                    "question": "Which one of the following ports handled the North Indian trade  during the Gupta period? ",
+                    "options": [
+                        "Tamralipti",
+                        "Borkte",
+                        "Kaveripattinam",
+                        "Bharukaccha"
+                    ],
+                    "answer": "Bharukaccha"
+                },
+                {
+                    "question": "Which one of the following is the correct explanation of A? ",
+                    "options": [
+                        "A is true but R is false",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "A is false but R is true"
+                    ],
+                    "answer": "A is true but R is false"
+                },
+                {
+                    "question": "Which one of the following kinds of farming was mentioned in the form of a dialogue between the king Milindapanho and the monk Nagasena? ",
+                    "options": [
+                        "Jhum cultivation",
+                        "Dry farming",
+                        "Wet cultivation",
+                        "Shifting cultivation"
+                    ],
+                    "answer": "Shifting cultivation"
+                },
+                {
+                    "question": "The given map represents: ",
+                    "options": [
+                        "The  Kalignga Edict",
+                        "The  Asoka Edict",
+                        "The  Ashoka Edict",
+                        "The  Ashoka Edict"
+                    ],
+                    "answer": "The  Ashoka Edict"
+                },
+                {
+                    "question": "Which one of the following is correctly matched? ",
+                    "options": [
+                        "1, 2 and 3",
+                        "1 and 2",
+                        "1 and 3",
+                        "1, 2 and 3"
+                    ],
+                    "answer": "1, 2 and 3"
+                },
+                {
+                    "question": "Which one of the following does not form part of the sixteen Mahajanapadas that existed in India? ",
+                    "options": [
+                        "Kasi",
+                        "Anga",
+                        "Kosala",
+                        "Magadha"
+                    ],
+                    "answer": "Magadha"
+                },
+                {
+                    "question": "The concept that 'King is the representative of the divine  power' was propounded by: ",
+                    "options": [
+                        "Kshatriyas",
+                        "Brahmanas",
+                        "Vaishyas",
+                        "Shudras"
+                    ],
+                    "answer": "Kshatriyas"
+                },
+                {
+                    "question": "The places marked A, B, C and D in the map represent the  following: ",
+                    "options": [
+                        "Kalinga, Andhra, Tamil Nadu, Orissa",
+                        "Kalinga, Tamil Nadu, Andhra, Orissa",
+                        "Kalinga, Orissa, Tamil Nadu, Andhra",
+                        "Orissa, Kalinga, Andhra, Tamil Nadu"
+                    ],
+                    "answer": "Kalinga, Andhra, Tamil Nadu, Orissa"
+                },
+                {
+                    "question": "According to ancient Indian cosmogonic ideas the  cycle of four kalas (yugas) is: ",
+                    "options": [
+                        "432,000, 2,592,000, 1,296,000, 648,000",
+                        "432,000, 1,296,000, 2,592,000, 648,000",
+                        "648,000, 432,000, 1,296,000, 2,592,000",
+                        "2,592,000, 1,296,000, 648,000, 432,000"
+                    ],
+                    "answer": "432,000, 1,296,000, 2,592,000, 648,000"
+                },
+                {
+                    "question": "The places marked A, B, C and D respectively are: ",
+                    "options": [
+                        "African trade",
+                        "West-European trade",
+                        "Middle-Eastern trade",
+                        "South-East Asian trade"
+                    ],
+                    "answer": "South-East Asian trade"
+                },
+                {
+                    "question": "The following persons came to India at one time or another: ",
+                    "options": [
+                        "Fa-Hien",
+                        "Hsuan Tsang",
+                        "I-tsing",
+                        "Hiuen Tsang"
+                    ],
+                    "answer": "I-tsing"
+                },
+                {
+                    "question": "The correct chronological sequence of their visits is: ",
+                    "options": [
+                        "31.4, 2, 1, 3",
+                        "3, 1, 4, 2",
+                        "3, 1, 2, 4",
+                        "2, 1, 3, 4"
+                    ],
+                    "answer": "3, 1, 4, 2"
+                },
+                {
+                    "question": "The state of India in the 6th century BC whose capital city 'Kashi' is located is: ",
+                    "options": [
+                        "Magadha",
+                        "Kasi",
+                        "Vatsa",
+                        "Kosala"
+                    ],
+                    "answer": "Kasi"
+                },
+                {
+                    "question": "The term 'Ayana' denotes: ",
+                    "options": [
+                        "beginning of the second century BC",
+                        "beginning of the second century AD",
+                        "a nomadic people",
+                        "a war"
+                    ],
+                    "answer": "a nomadic people"
+                },
+                {
+                    "question": "Which one of the following ports handled the North Indian trade  during the Gupta period? ",
+                    "options": [
+                        "Tamralipti",
+                        "Borkte",
+                        "Kaveripattinam",
+                        "Bharukaccha"
+                    ],
+                    "answer": "Bharukaccha"
+                },
+                {
+                    "question": "Which one of the following is the correct explanation of A? ",
+                    "options": [
+                        "A is true but R is false",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "Both A and R are true but R is not a correct explanation of A",
+                        "A is false but R is true"
+                    ],
+                    "answer": "A is true but R is false"
+                },
+                {
+                    "question": "Which one of the following kinds of farming was mentioned in the form of a dialogue between the king Milindapanho and the monk Nagasena? ",
+                    "options": [
+                        "Jhum cultivation",
+                        "Dry farming",
+                        "Wet cultivation",
+                        "Shifting cultivation"
+                    ],
+                    "answer": "Shifting cultivation"
+                },
+                {
+                    "question": "The given map represents: ",
+                    "options": [
+                        "The  Kalignga Edict",
+                        "The  Asoka Edict",
+                        "The  Ashoka Edict",
+                        "The  Ashoka Edict"
+                    ],
+                    "answer": "The  Ashoka Edict"
+                },
+                {
+                    "question": "Which one of the following is correctly matched? ",
+                    "options": [
+                        "1, 2 and 3",
+                        "1 and 2",
+                        "1 and 3",
+                        "1, 2 and 3"
+                    ],
+                    "answer": "1, 2 and 3"
+                },
+                {
+                    "question": "Which one of the following does not form part of the sixteen Mahajanapadas that existed in India? ",
+                    "options": [
+                        "Kasi",
+                        "Anga",
+                        "Kosala",
+                        "Magadha"
+                    ],
+                    "answer": "Magadha"
+                },
+                {
+                    "question": "The concept that 'King is the representative of the divine  power' was propounded by: ",
+                    "options": [
+                        "Kshatriyas",
+                        "Brahmanas",
+                        "Vaishyas",
+                        "Shudras"
+                    ],
+                    "answer": "Kshatriyas"
+                },
+                {
+                    "question": "The places marked A, B, C and D in the map represent the  following: ",
+                    "options": [
+                        "Kalinga, Andhra, Tamil Nadu, Orissa",
+                        "Kalinga, Tamil Nadu, Andhra, Orissa",
+                        "Kalinga, Orissa, Tamil Nadu, Andhra",
+                        "Orissa, Kalinga, Andhra, Tamil Nadu"
+                    ],
+                    "answer": "Kalinga, Andhra, Tamil Nadu, Orissa"
+                },
+                {
+                    "question": "According to ancient Indian cosmogonic ideas the  cycle of four kalas (yugas) is: ",
+                    "options": [
+                        "432,000, 2,592,000, 1,296,000, 648,000",
+                        "432,000, 1,296,000, 2,592,000, 648,000",
+                        "648,000, 432,000, 1,296,000, 2,592,000",
+                        "2,592,000, 1,296,000, 648,000, 432,000"
+                    ],
+                    "answer": "432,000, 1,296,000, 2,592,000, 648,000"
+                },
+                {
+                    "question": "The places marked A, B, C and D respectively are: ",
+                    "options": [
+                        "African trade",
+                        "West-European trade",
+                        "Middle-Eastern trade",
+                        "South-East Asian trade"
+                    ],
+                    "answer": "South-East Asian trade"
+                },
+                {
+                    "question": "The following persons came to India at one time or another: ",
+                    "options": [
+                        "Fa-Hien",
+                        "Hsuan Tsang",
+                        "I-tsing",
+                        "Hiuen Tsang"
+                    ],
+                    "answer": "I-tsing"
+                },
+                {
+                    "question": "The correct chronological sequence of their visits is: ",
+                    "options": [
+                        "31.4, 2, 1, 3",
+                        "3, 1, 4, 2",
+                        "3, 1, 2, 4",
+                        "2, 1, 3, 4"
+                    ],
+                    "answer": "3, 1, 4, 2"
+                },
+                {
+                    "question": "The state of India in the 6th century BC whose capital city 'Kashi' is located is: ",
+                    "options": [
+                        "Magadha",
+                        "Kasi",
+                        "Vatsa",
+                        "Kosala"
+                    ],
+                    "answer": "Kasi"
+                },
+                {
+                    "question": "The term 'Ayana' denotes: ",
+                    "options": [
+                        "beginning of the second century BC",
+                        "beginning of the second century AD",
+                        "a nomadic people",
+                        "a war"
+                    ],
+                    "answer": "a nomadic people"
+                }
+            ]
+        }
+    ]
+}
