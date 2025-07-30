@@ -28,8 +28,8 @@ app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 logging.basicConfig(level=logging.DEBUG)
 
 # Notion OAuth credentials
-client_id = "5e9dc8cb-8ed0-4885-a451-b2edca1aa699"
-client_secret = "secret_W0MN3GaPty9zWpJV5p7T6zfjwqi62rO9fC5xUZU8bgw"
+client_id = ""
+client_secret = ""
 redirect_uri = "https://thecodeworks.in/kxetra/redirect"  # Use 'localhost' as per Notion's requirement
 
 dailyNotes = []
